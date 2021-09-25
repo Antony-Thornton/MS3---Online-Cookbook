@@ -2,3 +2,7 @@
     background-color: #388e3c ;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
+
+.hero_image {
+    background: url(assets/images/pexels-ella-olsson-1640777.jpg) no-repeat center center /contain;
+}
