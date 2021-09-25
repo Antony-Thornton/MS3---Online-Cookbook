@@ -27,7 +27,13 @@ def get_tasks():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
-    
+
+
+@app.route("/home", methods=["GET", "POST"])
+def home():
+    return render_template("home.html")
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
