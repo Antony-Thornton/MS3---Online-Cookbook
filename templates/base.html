@@ -21,7 +21,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home')}}">Home</a></li>
                 <li><a href="#">Other</a></li>
-                <li><a href="#">Log In/Out</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
               </ul>
             </div>
@@ -31,12 +31,11 @@
             <li><h4 class="center-align">Online Cookbook</h4></li>
             <li><a href="{{ url_for('home')}}">Home</a></li>  
             <li><a href="#">Other</a></li>
-            <li><a href="#">Log In/Out</a></li>
+            <li><a href="#">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
           </ul>
     </header>
-    <div class="hero_image">
-    </div>
+    <!--<div class="hero_image"></div> -->
 
     {% block content %}
         <!-- Content from other pages goes in here. Add the content to the other html pages-->
