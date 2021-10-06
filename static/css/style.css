@@ -6,3 +6,14 @@
 .hero_image {
     background: url(assets/images/pexels-ella-olsson-1640777.jpg) no-repeat center center /contain;
 }
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
