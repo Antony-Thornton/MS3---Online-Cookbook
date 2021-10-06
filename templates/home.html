@@ -1,12 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-<img src="static/assets/images/pexels-ella-olsson-1640777.jpg" alt="Placeholder image" style="width: 100%;">
+    <img src="static/assets/images/pexels-ella-olsson-1640777.jpg" alt="Placeholder image" style="width: 100%;">
+    <section class="container">
+        <div class="card" style="width: 700px;">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="static/assets/images/pexels-alleksana-7471083.jpg" style="height: 500px; width: 700px;">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Welcome<i class="material-icons right"></i></span>
+              <p><a class="fas fa-user-plus prefix light-blue-text text-darken-3" href="{{ url_for('register') }}"> Register here</a></p>
+              <p><a class="fas fa-user-lock prefix light-blue-text text-darken-3" href="{{ url_for('login') }}"> Login here</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">You own online cookbook<i class="material-icons right">close</i></span>
+              <p>Looking for a way to store and track your favourite recipes?<br><br>
+                Sick of all those books taking up space in the kitchen?<br><br> 
+                Find yourseld in the shop wishing you hadnt forgotten a specific recipe?<br><br>
+                If the answer is yes to either of those questions than this site is the perfect solution.<br><br>
+                You can search through a list of our community’s recipes or create save and open your own recipe’s. All using your mobile or laptop.</p>
+            </div>
+          </div>
 
-<H1>HOME PAGE</H1>
-<h6>Thank you for taking the time to visit this website. </h6>
-
-
-
+        </section>
 
 {% endblock %}
