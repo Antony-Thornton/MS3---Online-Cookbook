@@ -31,3 +31,11 @@ body {
     height: 50%;
 
   }
+
+  .card-title:hover {
+      text-decoration: underline;
+  }
+
+  .prefix:hover {
+      text-decoration: underline;
+  }
