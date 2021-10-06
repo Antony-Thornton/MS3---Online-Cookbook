@@ -28,6 +28,11 @@ def tools():
     return render_template("tools.html")
 
 
+@app.route("/community")
+def community():
+    return render_template("community.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
