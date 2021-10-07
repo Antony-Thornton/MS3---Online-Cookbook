@@ -4,6 +4,10 @@
 <h1>Welcome back {{ username }}!</h1>
 <h2>This page will show all of the user submitted recipe's</h2>
 
+{% for user in user %}
+
+
+
 
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
@@ -14,10 +18,13 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Your current information<i class="material-icons right">close</i></span>
+      
+
+      
       <h6>Username</h6>
       <p>{{ username }}</p>
       <h6>Email Address</h6>
-      <p>{{ email }}</p>
+      <p>{{ user.email }}</p>
     </div>
   </div>
   <a href="/my-link/">Click me</a>
@@ -32,4 +39,7 @@
     <div class="col s6">6-columns (one-half)</div>
   </div>
         
+
+  {% endfor %}
+
 {% endblock %}

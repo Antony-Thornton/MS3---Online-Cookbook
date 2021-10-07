@@ -96,9 +96,13 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        user = list(mongo.db.users.find())
+        
+        return render_template("profile.html", username=username, user=user)
     
     return redirect(url_for("login"))
+
+    
 
 
 @app.route("/logout")
