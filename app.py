@@ -25,7 +25,8 @@ def get_tasks():
 
 @app.route("/tools")
 def tools():
-    return render_template("tools.html")
+    test = list(mongo.db.Test.find())
+    return render_template("tools.html", test=test)
 
 
 @app.route("/community")
