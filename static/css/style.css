@@ -136,3 +136,30 @@ img {
 
 
    }
+
+
+
+
+/* Tools */
+
+.tools_main_section {
+    text-align: center;
+
+
+}
+
+.tool_custom {
+    display: inline-block;
+    text-align: center;
+   }
+
+   .tool_custom div {
+    display: inline-flex;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    text-align: center;
+    margin: 10px;
+
+
+   }
