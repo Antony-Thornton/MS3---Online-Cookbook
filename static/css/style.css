@@ -27,6 +27,14 @@ body {
 
 
   /* Custom CSS */
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
   .container_custom img{
     height: 50%;
 
@@ -39,3 +47,92 @@ body {
   .prefix:hover {
       text-decoration: underline;
   }
+
+
+
+  /* Home Page */
+
+  .home_div {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+
+  .container_custom_home {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+  }
+
+
+  .centered_p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  
+  @media (max-width: 904px) {
+    .centered {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: auto;
+        font-size: xx-large;
+      }
+    
+    
+      .centered_p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: xx-small;
+      }
+
+
+   }
+   
+   @media (max-width: 598px) {
+    .centered {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 100%;
+        font-size: large;
+      }
+    
+    
+      .centered_p{
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: xx-small;
+        width: 100%;
+      }
+
+
+   }
