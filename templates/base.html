@@ -23,7 +23,7 @@
 				<ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
             <li><a href="{{ url_for('tools') }}">Cooking Tools</a></li>
-            <li><a href="{{ url_for('community') }}">Community Favourites</a></li>
+            <li><a href="{{ url_for('community') }}">Community Recipes</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipe's</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -40,7 +40,7 @@
             <li><h4 class="center-align light-blue-text text-darken 4">Cookbook</h4></li>
             <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
             <li><a href="{{ url_for('tools') }}">Cooking Tools</a></li>
-            <li><a href="{{ url_for('community') }}">Community Favourites</a></li>
+            <li><a href="{{ url_for('community') }}">Community Recipes</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">My Recipe's</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
