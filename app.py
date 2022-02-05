@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+# Check at the end of the project if this next line can be deleted.
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -46,12 +47,12 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
+        registration = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "email": request.form.get("email").lower()
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(registration)
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()

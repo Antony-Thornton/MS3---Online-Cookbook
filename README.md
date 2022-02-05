@@ -12,13 +12,12 @@
 * 2.2 Wireframes
 * 2.3 Website Objectives:
 * 2.4 Design Inspiration
-## 3. Features
-## [Features]('#features' "Features")
+## [3. Features](#3-features "Features")
 * 3.1 Existing Features
 * 3.2 Features Left to Implement
 * 3.3 Technologies Used
 
-## 5. Deployment
+## [5. Deployment](#5-deployment "Deployment")
 * 5.1 Local Deployment
 ## 6. Credits
 * 6.1 Content
@@ -54,8 +53,7 @@
 ## 2.4 Design Inspiration
 
 
-
-# Features
+# 3 Features
 
 
 ## 3.1 Existing Features
@@ -79,7 +77,7 @@ Am I responsive - http://ami.responsivedesign.is/
 
 
 
-# 5. Deployment
+# 5 Deployment
 
 ## 5.1 Local Deployment
 
@@ -103,6 +101,7 @@ Am I responsive - http://ami.responsivedesign.is/
 
 
 README written by Antony Thornton, 2021
+
 
 
 
