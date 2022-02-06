@@ -67,20 +67,20 @@ img {
 
 .centered {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  width: auto;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  background-color: rgba(8,156,228,1);
+  margin: 0%;
 }
 
 
 .centered_p{
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  left: 0%;
+  width: 100%;
+  background-color: rgba(8,156,228,1);
   color: white;
 }
 
@@ -88,10 +88,11 @@ img {
 @media (max-width: 904px) {
   .centered {
       position: absolute;
+      padding: 1%;
       top: 10%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(8,156,228,1);
       width: auto;
       font-size: xx-large;
     }
@@ -99,10 +100,11 @@ img {
   
     .centered_p{
       position: absolute;
+      padding: 1%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(8,156,228,1);
       color: white;
       font-size: xx-small;
     }
@@ -113,10 +115,11 @@ img {
  @media (max-width: 598px) {
   .centered {
       position: absolute;
+      padding: 1%;
       top: 0%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(8,156,228,1);
       color: white;
       width: 100%;
       font-size: large;
@@ -125,10 +128,11 @@ img {
   
     .centered_p{
       position: absolute;
+      padding: 1%;
       top: 63%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(8,156,228,1);
       color: white;
       font-size: xx-small;
       width: 100%;
