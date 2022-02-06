@@ -2,35 +2,35 @@
 
 # MS3---Online-Cookbook
 
-# BMW Memory Game
+# Online Cookbook
 
 # Contents
 
-## 1. Project Status
-## 2. User Story
+## [1. Project Status](#project-status "1. Project Status")
+## [2. User Story](#user-story "2. User Story")
 * 2.1 The Business Case (Project Goals)
 * 2.2 Wireframes
 * 2.3 Website Objectives:
 * 2.4 Design Inspiration
-## [3 Features](#features "Features")
+## [3. Features](#features "3. Features")
 * 3.1 Existing Features
 * 3.2 Features Left to Implement
 * 3.3 Technologies Used
+## [4. Deployment](#deployment "4. Deployment")
+* 4.1 Local
+## [5. Credits](#credits "5. Credits")
+* 5.1 Content
+* 5.2 Media
+* 5.3 Acknowledgements
+## [6. Lessons Learnt](#lessons-learnt "6. Lessons Learnt")
+* 6.1 Lessons
+* 6.2 Future Study Points
 
-## [5 Deployment](#deployment "Deployment")
-* 5.1 Local
-## 6. Credits
-* 6.1 Content
-* 6.2 Media
-* 6.3 Acknowledgements
-## 7. Lessons Learnt
-* 7.1 Lessons
-* 7.2 Future Study Points
-
-# 1. Project Status
+#
+# Project Status
 
 
-# 2. User Story
+# User Story
 ## 2.1 The business case (Project Goals):
 
 
@@ -77,26 +77,26 @@ Am I responsive - http://ami.responsivedesign.is/
 
 
 
-# Deployment 5
+# Deployment
 
-## 5.1 Local Deployment
-
-
-# 6. Credits
-## 6.1 Content
+## 4.1 Local Deployment
 
 
-## 6.2 Media
+# Credits
+## 5.1 Content
 
 
-## 6.3 Acknowledgements
+## 5.2 Media
 
 
-# 7. Lessons learnt
-## 7.1 Lessons
+## 5.3 Acknowledgements
 
 
-## 7.2 Future study points
+# Lessons learnt
+## 6.1 Lessons
+
+
+## 6.2 Future study points
 
 
 
