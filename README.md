@@ -32,7 +32,7 @@
 
 # User Story
 ## 2.1 The business case (Project Goals):
-
+This website has been designed to give the user the ability to record, ammend and view recipes online anywhere. The owner of the site is also looking to promote a brand of cooking utensils. 
 
 ## 2.2 Wireframes
 
