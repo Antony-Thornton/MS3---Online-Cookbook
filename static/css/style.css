@@ -50,6 +50,21 @@ img {
 
 
 
+.g-col-6 h1 {
+  background-color: rgba(8,156,228,1);
+  color: white;
+  font-size: 3rem;
+}
+
+.g-col-6 h3 {
+  font-size: 2rem;
+}
+
+.g-col-6 h4 {
+  font-size: 2rem;
+}
+
+
 /* Home Page */
 
 .home_div {

@@ -33,7 +33,9 @@ def tools():
 
 @app.route("/community")
 def community():
-    return render_template("community.html")
+    info = list(mongo.db.RecipeInfo.find())
+    test = list(mongo.db.Test.find())
+    return render_template("community.html", info=info,  test=test)
 
 
 @app.route("/register", methods=["GET", "POST"])
