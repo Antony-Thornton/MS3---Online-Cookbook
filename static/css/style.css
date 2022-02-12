@@ -343,3 +343,15 @@ label.star:before {
   visibility: visible;
   opacity: 1;
 }
+
+
+
+.collapsible_form {
+  padding: 0 10%;
+}
+
+
+.collapsible-header {
+  background-color: rgba(8,156,228,1);
+  color: white;
+}
