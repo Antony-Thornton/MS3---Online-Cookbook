@@ -1,39 +1,44 @@
-{% extends "base.html" %} {% block content %} <section class="container tools_main_section">
-    <h1 class="col s12 light-blue-text text-darken-4 move_to_top">Browse our selection of cooking tools</h1>
-    <h2>Browse our tools to help you become a true master chef!</h2>
-       
-    {% for tooldb in tooldb %} 
+{% extends "base.html" %} 
+{% block content %} 
 
-    <section>
-      <div class="tool_custom">
-        <div class="tool_custom_subdiv">
-          <div class="tool_custom_img_div">
-            <img src="/static/assets/images/utensils/microwave.jpg" alt="">
-          </div>
-          <div class="tool_custom_text_div">
-            <h6> {{ tooldb.random }} </h6>
-            <div class="stars">
-              <form action="">
-                <input class="star star-5" id="star-5" type="radio" name="star" />
-                <label class="star star-5" for="star-5"></label>
-                <input class="star star-4" id="star-4" type="radio" name="star" />
-                <label class="star star-4" for="star-4"></label>
-                <input class="star star-3" id="star-3" type="radio" name="star" />
-                <label class="star star-3" for="star-3"></label>
-                <input class="star star-2" id="star-2" type="radio" name="star" />
-                <label class="star star-2" for="star-2"></label>
-                <input class="star star-1" id="star-1" type="radio" name="star" />
-                <label class="star star-1" for="star-1"></label>
-                <p>
-                  <!-- star rating here-->(5)
-                </p>
-              </form>
-            </div>
+<section class="container tools_main_section">
+  <h1 class="col s12 light-blue-text text-darken-4 move_to_top">Browse our selection of cooking tools</h1>
+  <h2>Browse our tools to help you become a true master chef!</h2> 
+  
+  {% for tooldb in tooldb %} 
+  <section>
+    <div class="tool_custom">
+      <div class="tool_custom_subdiv">
+        <div class="tool_custom_img_div">
+          <img src="{{ tooldb.picpath }}" alt="">
+        </div>
+        <div class="tool_custom_text_div">
+          <h6> {{ tooldb.name }} </h6>
+          <h6> {{ tooldb.description }} </h6>
+          <h6> £{{ tooldb.price }} </h6>
+          <div class="stars">
+            <form action="">
+              <input class="star star-5" id="star-5" type="radio" name="star" />
+              <label class="star star-5" for="star-5"></label>
+              <input class="star star-4" id="star-4" type="radio" name="star" />
+              <label class="star star-4" for="star-4"></label>
+              <input class="star star-3" id="star-3" type="radio" name="star" />
+              <label class="star star-3" for="star-3"></label>
+              <input class="star star-2" id="star-2" type="radio" name="star" />
+              <label class="star star-2" for="star-2"></label>
+              <input class="star star-1" id="star-1" type="radio" name="star" />
+              <label class="star star-1" for="star-1"></label>
+              <p>
+                <!-- star rating here-->({{ tooldb.rating }})
+              </p>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-     
-    {% endfor %}
+    </div>
+  </section> 
+  {% endfor %}
 
-    {% endblock %}
+</section> 
+
+{% endblock %}
