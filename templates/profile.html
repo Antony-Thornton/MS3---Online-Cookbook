@@ -10,9 +10,50 @@
         <h5>My Recipe's</h5>
       </div>
       <div class="collapsible-body">
-        <h5>
-          View your recipe's here
-        </h5>
+        <h2>Stuck for ideas. Why not see what our community likes.</h2>
+        {% for info in info %} 
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{{ info.picpath }}">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><h1>{{ info.recipe_name }}</h1><i class="material-icons right">Open</i></span>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><h6>{{ info.recipe_name }}</h6><i class="material-icons right">close</i></span>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Feeds:</th>
+                      <td>{{ info.feeds }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Vegetarian (Yes/No):</th>
+                      <td>{{ info.veg }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Vegan (Yes/No):</th>
+                      <td>{{ info.vegan }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div style="text-align: left;">
+                  <h4>Cooking Instuctions:</h4>
+                  <br>
+                  <p>{{ info.cooking}}</p>
+                </div>
+                <div style="text-align: left;">
+                  <h4>Ingredients:</h4>
+                  <br>
+                  <p>{{ info.cooking}}</p>
+                </div>
+              </div>
+            </div>
+    
+    
+            
+        {% endfor %}
+    
     </li>
     <li>
       <div class="collapsible-header">
