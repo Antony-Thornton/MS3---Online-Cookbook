@@ -63,6 +63,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -100,9 +101,40 @@ def profile(username):
 
     if session["user"]:
         user = list(mongo.db.users.find())
+        info = list(mongo.db.RecipeInfo.find())
 
-    info = list(mongo.db.RecipeInfo.find())
-    return render_template("profile.html", username=username, user=user, info=info)
+    if request.method == "POST":
+        veg = "N" if request.form.get("veg") else "Y"
+        vegan = "N" if request.form.get("vegan") else "Y"
+
+        form = request.form.to_dict()
+        print(form)
+        # search for a recipe with the recipe name 
+        search = mongo.db.RecipeInfo.find_one(
+            {"recipe_name": form["recipe_name"]})
+       
+        # if their is no recipe with that recipe_name on the form, then None
+        # will be returned. So...
+        if not search:
+            # insert the recipe
+            recipe_add = {
+                        "recipe_name": request.form.get("recipe_name"),
+                        "feeds": request.form.get("feeds"),
+                        "veg": veg,
+                        "vegan": vegan,
+                        "created_by": session["user"],
+                        "cooking": request.form.get("cooking"),            
+                }
+            mongo.db.RecipeInfo.insert_one(recipe_add)
+            flash("Task successfully added")
+            return render_template(
+                "profile.html", username=username, user=user, info=info)
+
+        else:     
+            flash("Duplicate recipe. Please change name and try again.")
+
+    return render_template(
+        "profile.html", username=username, user=user, info=info)
     return redirect(url_for("login"))
 
 
@@ -118,3 +150,5 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
+
