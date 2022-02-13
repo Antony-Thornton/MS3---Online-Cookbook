@@ -106,6 +106,7 @@ def profile(username):
     if request.method == "POST":
         veg = "N" if request.form.get("veg") else "Y"
         vegan = "N" if request.form.get("vegan") else "Y"
+        community_friendly = "N" if request.form.get("comm_friendly") else "Y"
 
         form = request.form.to_dict()
         print(form)
@@ -123,7 +124,8 @@ def profile(username):
                         "veg": veg,
                         "vegan": vegan,
                         "created_by": session["user"],
-                        "cooking": request.form.get("cooking"),            
+                        "cooking": request.form.get("cooking"),  
+                        "comm_friendly": community_friendly,       
                 }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Task successfully added")
