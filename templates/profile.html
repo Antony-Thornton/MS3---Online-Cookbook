@@ -112,6 +112,41 @@
     <li>
       <div class="collapsible-header">
         <h5>
+          Delete recipe
+        </h5>
+      </div>
+      <div class="collapsible-body">
+        <h5>Your recipe list</h5>
+        <div class="buffer"></div>
+        {% for info in info %} 
+
+        <table class="table">
+          <h5>{{ info.recipe_name }}</h5>
+          <tbody>
+            <tr>
+              <th scope="row">Feeds:</th>
+              <td>{{ info.feeds }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Vegetarian (Yes/No):</th>
+              <td>{{ info.veg }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Vegan (Yes/No):</th>
+              <td>{{ info.vegan }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+          Delete
+        </button>
+        <div class="buffer"></div>
+        {% endfor %}  
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+        <h5>
           Your details
         </h5>
       </div>
