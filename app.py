@@ -148,9 +148,18 @@ def logout():
     return redirect(url_for("login"))
 
 
+# App route can be linked to an A by using URL_for in html. 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    # Mongo db link - mongo.db.RecipeInfo.remove()
+    # need to define this. What is objectID aimed at{"recipe_name": ObjectId("recipe_name")} 
+    mongo.db.RecipeInfo.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for(
+        "profile", username=session["user"]))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-
-

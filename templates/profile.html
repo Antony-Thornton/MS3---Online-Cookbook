@@ -143,9 +143,7 @@
             </tr>
           </tbody>
         </table>
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Delete
-        </button>
+          <a href="{{ url_for('delete_recipe', recipe_id=info._id) }}" class="btn-small green accent-4">Delete</a>
         <div class="buffer"></div>
         {% endfor %}  
       </div>
