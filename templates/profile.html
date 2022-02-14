@@ -10,7 +10,10 @@
         <h5>My Recipe's</h5>
       </div>
       <div class="collapsible-body">
+        
+        
         {% for info in info %} 
+        {% if session.user|lower == info.created_by|lower %}
             <div class="card">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ info.picpath }}">
@@ -50,9 +53,9 @@
             </div>
     
     
-            
+            {% endif %}    
         {% endfor %}
-    
+        
     </li>
     <li>
       <div class="collapsible-header">
@@ -125,7 +128,7 @@
         <h5>Your recipe list</h5>
         <div class="buffer"></div>
         {% for info in info %} 
-
+        {% if session.user|lower == info.created_by|lower %}
         <table class="table">
           <h5>{{ info.recipe_name }}</h5>
           <tbody>
@@ -145,6 +148,7 @@
         </table>
           <a href="{{ url_for('delete_recipe', recipe_id=info._id) }}" class="btn-small green accent-4">Delete</a>
         <div class="buffer"></div>
+        {% endif %}  
         {% endfor %}  
       </div>
     </li>
@@ -172,6 +176,5 @@
     </li>
   </ul>
 </div> 
-
 
     {% endblock %}
