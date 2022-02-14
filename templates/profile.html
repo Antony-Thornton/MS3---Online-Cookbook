@@ -168,7 +168,11 @@
             </tr>
             <tr>
               <td>{{username}}</td>
-              <td>{{ user.email }}</td>
+              {% for user in user %}
+              {% if session.user|lower == user.username|lower %}
+                <td>{{ user.email }}</td>
+              {% endif %}  
+              {% endfor %}  
             </tr>
           </tbody>
         </table>
