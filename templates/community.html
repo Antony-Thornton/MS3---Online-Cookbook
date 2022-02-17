@@ -5,6 +5,24 @@
 <section class="container tools_main_section">
 <h1 class="col s12 light-blue-text text-darken-4 move_to_top">Below are some our community approved recipes.</h1>
 <h2>Stuck for ideas. Why not see what our community likes.</h2>
+
+<div class="row card-panel grey lighten-5">
+  <form action="" method="post" class="col s12">
+      <div class="row valign-wrapper center-align">
+          <div class="input-field col s12 m8">
+              <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+              <input type="text" name="query" id="query" minlength="3" class="validate" required>
+              <label for="query">Search Tasks</label>
+          </div>
+          <div class="col s12 m4">
+              <a href="" class="red btn text-shadow">Reset</a>
+              <button type="submit" class="light-blue darken-1 btn text-shadow">
+                  <i class="fas fa-search left"></i> Search
+              </button>
+          </div>
+      </div>
+  </form>
+</div>
     {% for info in info %} 
     {% if info.comm_friendly == "Y" %}
         <div class="card">
