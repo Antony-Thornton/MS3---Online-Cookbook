@@ -120,8 +120,8 @@ def profile(username):
         info = list(mongo.db.RecipeInfo.find())
 
     if request.method == "POST":
-        veg = "N" if request.form.get("veg") else "Y"
-        vegan = "N" if request.form.get("vegan") else "Y"
+        veg = "Vegetarian" if request.form.get("veg") else "No"
+        vegan = "Vegan" if request.form.get("vegan") else "No"
         community_friendly = "N" if request.form.get("comm_friendly") else "Y"
 
         form = request.form.to_dict()
