@@ -33,11 +33,10 @@ def tools():
 
 
 @app.route("/search", methods=["GET", "POST"])
-def search():
+def search_comm():
     query = request.form.get("query")
     tasks = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
     return render_template("community.html", tasks=tasks)
-
 
 @app.route("/community")
 def community():
