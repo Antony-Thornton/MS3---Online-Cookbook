@@ -35,15 +35,17 @@ def tools():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    tasks = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
-    return render_template("community.html", tasks=tasks)
+    info = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
+    return render_template("community.html", info=info)
 
 
 @app.route("/search_recipes", methods=["GET", "POST"])
 def search_recipes():
     query = request.form.get("query")
-    tasks = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
-    return render_template("profile.html", tasks=tasks)
+    info = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
+    # print(info)
+    # print("issue")
+    return render_template("profile.html", info=info)
 
 
 @app.route("/community")
