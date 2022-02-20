@@ -32,6 +32,13 @@ def tools():
     return render_template("tools.html", test=test, tooldb=tooldb)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    tasks = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
+    return render_template("community.html", tasks=tasks)
+
+
 @app.route("/community")
 def community():
     info = list(mongo.db.RecipeInfo.find())
