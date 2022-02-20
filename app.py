@@ -38,6 +38,7 @@ def search_comm():
     tasks = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
     return render_template("community.html", tasks=tasks)
 
+
 @app.route("/community")
 def community():
     info = list(mongo.db.RecipeInfo.find())
