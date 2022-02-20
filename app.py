@@ -140,9 +140,11 @@ def profile(username):
                         "veg": veg,
                         "vegan": vegan,
                         "created_by": session["user"],
-                        "cooking": request.form.get("cooking"),  
-                        "comm_friendly": community_friendly,       
-                }
+                        "cooking": request.form.get("cooking"),
+                        "comm_friendly": community_friendly,
+                        "ingredients": request.form.get("ingredients"),
+                        "picpath": request.form.get("picpath"),
+                        }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Task successfully added")
             return render_template(

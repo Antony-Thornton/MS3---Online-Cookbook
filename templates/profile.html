@@ -10,7 +10,7 @@
 
   <div class="collapsible_form" style="text-align: left;">
   <ul class="collapsible">
-    <li>
+    <li class="active">
       <div class="collapsible-header">
         <h5>My Recipe's</h5>
       </div>
@@ -97,19 +97,19 @@
             </div>
             <p>
               <label>
-                <input type="checkbox" class="filled-in" name="veg" required/>
+                <input type="checkbox" class="filled-in" name="veg" />
                 <span>Vegetarian?</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" class="filled-in" name="vegan" required/>
+                <input type="checkbox" class="filled-in" name="vegan" />
                 <span>Vegan?</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" class="filled-in" name="comm_recipe" required/>
+                <input type="checkbox" class="filled-in" name="comm_recipe" />
                 <span>Community Friendly?</span>
               </label>
             </p>
@@ -132,6 +132,32 @@
                     <div class="tooltip" required>Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Ingredients</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <div class="tooltip" required>Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Picture URL</label>
+                </div>
+              </div>
+              <div class="input-field col s12">
+                <div class="tooltip" required>Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
                 </div>
               </div>
             </div>
