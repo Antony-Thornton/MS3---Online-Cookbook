@@ -148,7 +148,7 @@ def profile(username):
                         "picpath": request.form.get("picpath"),
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
-            flash("Task successfully added")
+            flash("Recipe successfully added")
             return render_template(
                 "profile.html", username=username, user=user, info=info)
 
