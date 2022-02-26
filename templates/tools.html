@@ -13,9 +13,15 @@
           <img src="{{ tooldb.picpath }}" alt="">
         </div>
         <div class="tool_custom_text_div">
-          <h6> {{ tooldb.name }} </h6>
-          <h6> {{ tooldb.description }} </h6>
-          <h6> £{{ tooldb.price }} </h6>
+          <div class="row">
+          <div class="col s6">
+            <h6> {{ tooldb.name }} </h6>  
+            <h6 style="color: red; font-weight: bold;"> £{{ tooldb.price }} </h6>
+          </div>
+          <div class="col s6">
+            {{ tooldb.description }}
+          </div>
+        </div>
           <div class="stars">
             <form action="">
               <input class="star star-5" id="star-5" type="radio" name="star" />
@@ -29,7 +35,10 @@
               <input class="star star-1" id="star-1" type="radio" name="star" />
               <label class="star star-1" for="star-1"></label>
               <p>
-                <!-- star rating here-->({{ tooldb.rating }})
+                {% for ratingdb in ratingdb %}
+                <!-- star rating here-->
+                ({{ ratingdb.star_rating }})
+                {% endfor %}
               </p>
             </form>
           </div>

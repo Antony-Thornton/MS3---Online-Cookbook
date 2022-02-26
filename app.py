@@ -29,7 +29,9 @@ def get_tasks():
 def tools():
     test = list(mongo.db.Test.find())
     tooldb = list(mongo.db.Tools.find())
-    return render_template("tools.html", test=test, tooldb=tooldb)
+    ratingdb = list(mongo.db.ratings.find())
+    return render_template(
+        "tools.html", test=test, tooldb=tooldb, ratingdb=ratingdb)
 
 
 @app.route("/search", methods=["GET", "POST"])
