@@ -50,6 +50,13 @@ def search_recipes():
     return render_template("profile.html", info=info)
 
 
+@app.route("/recipes")
+def recipes():
+    info = list(mongo.db.RecipeInfo.find())
+    test = list(mongo.db.Test.find())
+    return render_template("recipes.html", info=info,  test=test)
+
+
 @app.route("/community")
 def community():
     info = list(mongo.db.RecipeInfo.find())
