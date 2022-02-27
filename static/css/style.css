@@ -464,6 +464,6 @@ label.star:before {
 }
 
 .links:hover {
-  color: blue; 
+  color: rgba(8,156,228,1); 
   text-decoration: underline;
 }
