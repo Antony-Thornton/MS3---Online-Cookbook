@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %} 
 
-<section class="container tools_main_section">
+<section class="container" style="text-align: center;">
   <h1 class="col s12 light-blue-text text-darken-4 move_to_top">Welcome back {{ username }}.</h1>
   <h1>Browse your account here.</h1>
 
@@ -213,14 +213,24 @@
         <table>
           <tbody>
             <tr>
-              <td>Username</td>
-              <td>Registered Email</td>
+              <td>
+                <h5>
+                  Username:
+                </h5>
+              </td>
+              <td>{{username}}</td>
             </tr>
             <tr>
-              <td>{{username}}</td>
+              <td>
+                <h5>
+                  Registered Email:
+                </h5>
+              </td>
               {% for user in user %}
               {% if session.user|lower == user.username|lower %}
-                <td>{{ user.email }}</td>
+                <td>
+                  {{ user.email }}
+                </td>
               {% endif %}  
               {% endfor %}  
             </tr>
