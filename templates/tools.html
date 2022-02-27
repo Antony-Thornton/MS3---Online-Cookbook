@@ -10,13 +10,16 @@
     <div class="tool_custom">
       <div class="tool_custom_subdiv">
         <div class="tool_custom_img_div">
-          <img src="{{ tooldb.picpath }}" alt="">
+          <a href=" {{ tooldb.link }}" class="links" target="_blank" title="Go to LakeLand site">
+            <img src="{{ tooldb.picpath }}" alt="">
+          </a>
         </div>
         <div class="tool_custom_text_div">
           <div class="row">
           <div class="col s6">
+            <br>
             <h6> 
-              <a href=" {{ tooldb.link }}" target="_blank" title="Go to LakeLand site">
+              <a href=" {{ tooldb.link }}" class="links" target="_blank" title="Go to LakeLand site">
                 {{ tooldb.name }} 
               </a>
             </h6>
@@ -26,7 +29,7 @@
           <div class="col s6">
             {{ tooldb.description }}
           </div>
-        </div>
+        
           <div class="stars">
             <form action="">
               <input class="star star-5" id="star-5" type="radio" name="star" />
@@ -47,6 +50,7 @@
               {% endfor %}
             </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
