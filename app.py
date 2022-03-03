@@ -167,6 +167,55 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/profilerecipe/<username>", methods=["GET", "POST"])
+def profilerecipe(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        user = list(mongo.db.users.find())
+        info = list(mongo.db.RecipeInfo.find())
+
+    if request.method == "POST":
+        veg = "Vegetarian" if request.form.get("veg") else "No"
+        vegan = "Vegan" if request.form.get("vegan") else "No"
+        community_friendly = "N" if request.form.get("comm_friendly") else "Y"
+
+        form = request.form.to_dict()
+        print(form)
+        # search for a recipe with the recipe name 
+        search = mongo.db.RecipeInfo.find_one(
+            {"recipe_name": form["recipe_name"]})
+       
+        # if their is no recipe with that recipe_name on the form, then None
+        # will be returned. So...
+        if not search:
+            # insert the recipe
+            recipe_add = {
+                        "recipe_name": request.form.get("recipe_name"),
+                        "feeds": request.form.get("feeds"),
+                        "veg": veg,
+                        "vegan": vegan,
+                        "created_by": session["user"],
+                        "cooking": request.form.get("cooking"),
+                        "comm_friendly": community_friendly,
+                        "ingredients": request.form.get("ingredients"),
+                        "picpath": request.form.get("picpath"),
+                        }
+            mongo.db.RecipeInfo.insert_one(recipe_add)
+            flash("Recipe successfully added")
+            return render_template(
+                "profile.html", username=username, user=user, info=info)
+
+        else:     
+            flash("Duplicate recipe. Please change name and try again.")
+
+    return render_template(
+        "profile.html", username=username, user=user, info=info)
+    return redirect(url_for("login"))
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
