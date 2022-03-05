@@ -171,8 +171,8 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/recipepage/<username>", methods=["GET", "POST"])
-def recipepage(username):
+@app.route("/recipe_page/<username>", methods=["GET", "POST"])
+def recipe_page(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
