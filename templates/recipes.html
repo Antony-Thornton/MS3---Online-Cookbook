@@ -54,12 +54,8 @@
                         <td>{{ info.vegan }}</td>
                       </tr>
                       <tr>
-                        <th scope="row">Created by:</th>
-                        {% if info.comm_name_show == "Yes" %}
-                        <td>{{ info.created_by }}</td>
-                        {% else %}
-                        <td>Private</td>
-                        {% endif %} 
+                        <th scope="row">Username visible to community:</th>
+                        <td>{{ info.comm_name_show }}</td>
                       </tr>
                     </tbody>
                   </table>
