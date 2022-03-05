@@ -156,6 +156,7 @@ def profile(username):
                         "picpath": request.form.get("picpath"),
                         "comm_name_show": community_name_show,
                         "recipe_url": request.form.get("recipe_url"),
+                        "category": request.form.get("category"),
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
@@ -208,6 +209,7 @@ def profilerecipe(username):
                         "picpath": request.form.get("picpath"),
                         "comm_name_show": community_name_show,
                         "recipe_url": request.form.get("recipe_url"),
+                        "category": request.form.get("category"),
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
