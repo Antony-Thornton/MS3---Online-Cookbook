@@ -154,7 +154,8 @@ def profile(username):
                         "comm_friendly": community_friendly,
                         "ingredients": request.form.get("ingredients"),
                         "picpath": request.form.get("picpath"),
-                        "comm_name_show": community_name_show
+                        "comm_name_show": community_name_show,
+                        "recipe_url": request.form.get("recipe_url"),
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
@@ -205,7 +206,8 @@ def profilerecipe(username):
                         "comm_friendly": community_friendly,
                         "ingredients": request.form.get("ingredients"),
                         "picpath": request.form.get("picpath"),
-                        "comm_name_show": community_name_show
+                        "comm_name_show": community_name_show,
+                        "recipe_url": request.form.get("recipe_url"),
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
