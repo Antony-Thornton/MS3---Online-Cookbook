@@ -27,7 +27,7 @@
 
 {% if info|length > 0 %}
   {% for info in info %} 
-    {% if info.comm_friendly == "Y" %}
+    {% if info.comm_friendly == "Yes" %}
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="{{ info.picpath }}">
@@ -50,6 +50,14 @@
                 <tr>
                   <th scope="row">Vegan (Yes/No):</th>
                   <td>{{ info.vegan }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Created by:</th>
+                  {% if info.comm_name_show == "Yes" %}
+                  <td>{{ info.created_by }}</td>
+                  {% else %}
+                  <td>Private</td>
+                  {% endif %} 
                 </tr>
               </tbody>
             </table>

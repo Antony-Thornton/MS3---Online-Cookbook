@@ -131,7 +131,8 @@ def profile(username):
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
         vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "N" if request.form.get("comm_friendly") else "Y"
+        community_friendly = "No" if request.form.get("comm_friendly") else "Yes"
+        community_name_show = "No" if request.form.get("comm_name_show") else "Yes"
 
         form = request.form.to_dict()
         print(form)
@@ -153,6 +154,7 @@ def profile(username):
                         "comm_friendly": community_friendly,
                         "ingredients": request.form.get("ingredients"),
                         "picpath": request.form.get("picpath"),
+                        "comm_name_show": community_name_show
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
@@ -180,7 +182,8 @@ def profilerecipe(username):
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
         vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "N" if request.form.get("comm_friendly") else "Y"
+        community_friendly = "No" if request.form.get("comm_friendly") else "Yes"
+        community_name_show = "No" if request.form.get("comm_name_show") else "Yes"
 
         form = request.form.to_dict()
         print(form)
@@ -202,6 +205,7 @@ def profilerecipe(username):
                         "comm_friendly": community_friendly,
                         "ingredients": request.form.get("ingredients"),
                         "picpath": request.form.get("picpath"),
+                        "comm_name_show": community_name_show
                         }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")

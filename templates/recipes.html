@@ -53,6 +53,14 @@
                         <th scope="row">Vegan (Yes/No):</th>
                         <td>{{ info.vegan }}</td>
                       </tr>
+                      <tr>
+                        <th scope="row">Created by:</th>
+                        {% if info.comm_name_show == "Yes" %}
+                        <td>{{ info.created_by }}</td>
+                        {% else %}
+                        <td>Private</td>
+                        {% endif %} 
+                      </tr>
                     </tbody>
                   </table>
                   <div style="text-align: left;">
@@ -63,7 +71,7 @@
                   <div style="text-align: left;">
                     <h4>Ingredients:</h4>
                     <br>
-                    <p>{{ info.cooking}}</p>
+                    <p>{{ info.ingredients}}</p>
                   </div>
                 </div>
               </div>

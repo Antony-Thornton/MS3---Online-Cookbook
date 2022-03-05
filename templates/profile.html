@@ -43,6 +43,12 @@
                 <span>Community Friendly?</span>
               </label>
             </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" name="comm_name_show" />
+                <span>Username visible to community?</span>
+              </label>
+            </p>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
@@ -124,6 +130,19 @@
               <th scope="row">Vegan (Yes/No):</th>
               <td>{{ info.vegan }}</td>
             </tr>
+            <tr>
+              <th scope="row">Community Friendly? (Yes/No):</th>
+              <td>{{ info.comm_friendly }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Instructions:</th>
+              <td>{{ info.cooking }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Ingredients:</th>
+              <td>{{ info.ingredients }}</td>
+            </tr>
+
           </tbody>
         </table>
           <a href="{{ url_for('delete_recipe', recipe_id=info._id) }}" class="btn-small green accent-4">Delete</a>
