@@ -210,7 +210,7 @@ def profilerecipe(username):
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
             return render_template(
-                "profile.html", username=username, user=user, info=info)
+                "recipe.html", username=username, user=user, info=info)
 
         else:     
             flash("Duplicate recipe. Please change name and try again.")
