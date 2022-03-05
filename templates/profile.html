@@ -128,7 +128,7 @@
         {% for info in info %} 
         {% if session.user|lower == info.created_by|lower %}
         <table class="table">
-          <h5>{{ info.recipe_name }}</h5>
+          <h3>{{ info.recipe_name }}</h3>
           <tbody>
             <tr>
               <th scope="row">Feeds:</th>
