@@ -127,7 +127,7 @@ def profile(username):
     if session["user"]:
         user = list(mongo.db.users.find())
         info = list(mongo.db.RecipeInfo.find())
-
+        
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
         vegan = "Vegan" if request.form.get("vegan") else "No"
@@ -180,6 +180,7 @@ def profilerecipe(username):
     if session["user"]:
         user = list(mongo.db.users.find())
         info = list(mongo.db.RecipeInfo.find())
+        categories = list(mongo.db.RecipeInfo.distinct("category"))
 
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
@@ -214,7 +215,7 @@ def profilerecipe(username):
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
             return render_template(
-                "recipe.html", username=username, user=user, info=info)
+                "recipe.html", username=username, user=user, info=info, categories=categories)
 
         else:     
             flash("Duplicate recipe. Please change name and try again.")
