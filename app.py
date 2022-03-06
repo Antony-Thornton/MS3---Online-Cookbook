@@ -27,11 +27,10 @@ def get_tasks():
 
 @app.route("/tools")
 def tools():
-    test = list(mongo.db.Test.find())
     tooldb = list(mongo.db.Tools.find())
     ratingdb = list(mongo.db.ratings.find())
     return render_template(
-        "tools.html", test=test, tooldb=tooldb, ratingdb=ratingdb)
+        "tools.html", tooldb=tooldb, ratingdb=ratingdb)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -53,7 +52,6 @@ def search_recipes():
 @app.route("/recipes")
 def recipes():
     info = list(mongo.db.RecipeInfo.find())
-    test = list(mongo.db.Test.find())
 
     categories = {}
     distinct_categories = list(mongo.db.RecipeInfo.distinct("category"))
@@ -62,9 +60,6 @@ def recipes():
         recipes = list(mongo.db.RecipeInfo.find({"category": category}))
         categories[category] = recipes
 
-
-    print(categories)
-
     return render_template(
         "recipes.html", info=info, categories=categories, recipes=recipes)
 
@@ -72,8 +67,7 @@ def recipes():
 @app.route("/community")
 def community():
     info = list(mongo.db.RecipeInfo.find())
-    test = list(mongo.db.Test.find())
-    return render_template("community.html", info=info,  test=test)
+    return render_template("community.html", info=info)
 
 
 @app.route("/register", methods=["GET", "POST"])
