@@ -21,7 +21,9 @@
       </form>
     </div>
     <div class="collapsible_form" style="text-align: left;">
+      {% if session.user|lower == info.created_by|lower %}
       <ul class="collapsible">
+        
         {% for key, value in categories.items() %}
 
         <li>
@@ -33,7 +35,7 @@
             <div class="row">
               {% for recipe in value %}
               {% if recipe|length > 0 %}
-              {% if session.user|lower == recipe.created_by|lower %} <div class="card">
+               <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="{{ recipe.picpath }}">
                 </div>
@@ -81,13 +83,22 @@
                 </div>
               </div>
               {% endif %}
-              {% else %} <h3>No results Found</h3> {% endif %}
+              
               {% endfor %}
 
 
             </li>
             {% endfor %}
       </ul>
+      {% else %} 
+        <h3>
+          Your recipe list appears to be empty. To submit a recipe please click 
+          <a href="{{ url_for('profile', username=session['user']) }}" class="links" style="text-align: center;">
+            here
+          </a>
+          .
+        </h3> 
+      {% endif %}
     </div>
   </div>
 
