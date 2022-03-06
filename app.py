@@ -54,7 +54,19 @@ def search_recipes():
 def recipes():
     info = list(mongo.db.RecipeInfo.find())
     test = list(mongo.db.Test.find())
-    return render_template("recipes.html", info=info,  test=test)
+
+    categories = {}
+    distinct_categories = list(mongo.db.RecipeInfo.distinct("category"))
+
+    for category in distinct_categories:
+        recipes = list(mongo.db.RecipeInfo.find({"category": category}))
+        categories[category] = recipes
+
+
+    print(categories)
+
+    return render_template(
+        "recipes.html", info=info, categories=categories, recipes=recipes)
 
 
 @app.route("/community")
@@ -102,9 +114,9 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
-                        request.form.get("username")))
+                    request.form.get("username")))
                 return redirect(url_for(
-                            "profile", username=session["user"]))
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -127,43 +139,45 @@ def profile(username):
     if session["user"]:
         user = list(mongo.db.users.find())
         info = list(mongo.db.RecipeInfo.find())
-        
+
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
         vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "No" if request.form.get("comm_friendly") else "Yes"
-        community_name_show = "Yes" if request.form.get("comm_name_show") else "No"
+        community_friendly = "No" if request.form.get(
+            "comm_friendly") else "Yes"
+        community_name_show = "Yes" if request.form.get(
+            "comm_name_show") else "No"
 
         form = request.form.to_dict()
         print(form)
-        # search for a recipe with the recipe name 
+        # search for a recipe with the recipe name
         search = mongo.db.RecipeInfo.find_one(
             {"recipe_name": form["recipe_name"]})
-       
+
         # if their is no recipe with that recipe_name on the form, then None
         # will be returned. So...
         if not search:
             # insert the recipe
             recipe_add = {
-                        "recipe_name": request.form.get("recipe_name"),
-                        "feeds": request.form.get("feeds"),
-                        "veg": veg,
-                        "vegan": vegan,
-                        "created_by": session["user"],
-                        "cooking": request.form.get("cooking"),
-                        "comm_friendly": community_friendly,
-                        "ingredients": request.form.get("ingredients"),
-                        "picpath": request.form.get("picpath"),
-                        "comm_name_show": community_name_show,
-                        "recipe_url": request.form.get("recipe_url"),
-                        "category": request.form.get("category"),
-                        }
+                "recipe_name": request.form.get("recipe_name"),
+                "feeds": request.form.get("feeds"),
+                "veg": veg,
+                "vegan": vegan,
+                "created_by": session["user"],
+                "cooking": request.form.get("cooking"),
+                "comm_friendly": community_friendly,
+                "ingredients": request.form.get("ingredients"),
+                "picpath": request.form.get("picpath"),
+                "comm_name_show": community_name_show,
+                "recipe_url": request.form.get("recipe_url"),
+                "category": request.form.get("category"),
+            }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
             return render_template(
                 "profile.html", username=username, user=user, info=info)
 
-        else:     
+        else:
             flash("Duplicate recipe. Please change name and try again.")
 
     return render_template(
@@ -177,52 +191,56 @@ def recipe_page(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+    categories = []
+
     if session["user"]:
         user = list(mongo.db.users.find())
         info = list(mongo.db.RecipeInfo.find())
         categories = list(mongo.db.RecipeInfo.distinct("category"))
+        print(categories)
 
     if request.method == "POST":
         veg = "Vegetarian" if request.form.get("veg") else "No"
         vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "No" if request.form.get("comm_friendly") else "Yes"
-        community_name_show = "No" if request.form.get("comm_name_show") else "Yes"
+        community_friendly = "No" if request.form.get(
+            "comm_friendly") else "Yes"
+        community_name_show = "No" if request.form.get(
+            "comm_name_show") else "Yes"
 
         form = request.form.to_dict()
         print(form)
-        # search for a recipe with the recipe name 
+        # search for a recipe with the recipe name
         search = mongo.db.RecipeInfo.find_one(
             {"recipe_name": form["recipe_name"]})
-       
+
         # if their is no recipe with that recipe_name on the form, then None
         # will be returned. So...
         if not search:
             # insert the recipe
             recipe_add = {
-                        "recipe_name": request.form.get("recipe_name"),
-                        "feeds": request.form.get("feeds"),
-                        "veg": veg,
-                        "vegan": vegan,
-                        "created_by": session["user"],
-                        "cooking": request.form.get("cooking"),
-                        "comm_friendly": community_friendly,
-                        "ingredients": request.form.get("ingredients"),
-                        "picpath": request.form.get("picpath"),
-                        "comm_name_show": community_name_show,
-                        "recipe_url": request.form.get("recipe_url"),
-                        "category": request.form.get("category"),
-                        }
+                "recipe_name": request.form.get("recipe_name"),
+                "feeds": request.form.get("feeds"),
+                "veg": veg,
+                "vegan": vegan,
+                "created_by": session["user"],
+                "cooking": request.form.get("cooking"),
+                "comm_friendly": community_friendly,
+                "ingredients": request.form.get("ingredients"),
+                "picpath": request.form.get("picpath"),
+                "comm_name_show": community_name_show,
+                "recipe_url": request.form.get("recipe_url"),
+                "category": request.form.get("category"),
+            }
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
             return render_template(
                 "recipe.html", username=username, user=user, info=info, categories=categories)
 
-        else:     
+        else:
             flash("Duplicate recipe. Please change name and try again.")
 
-    return render_template(
-        "profile.html", username=username, user=user, info=info)
-    return redirect(url_for("login"))
+    return render_template("profile.html", username=username, user=user, info=info, categories=categories)
+    # return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -233,11 +251,11 @@ def logout():
     return redirect(url_for("login"))
 
 
-# App route can be linked to an A by using URL_for in html. 
+# App route can be linked to an A by using URL_for in html.
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     # Mongo db link - mongo.db.RecipeInfo.remove()
-    # need to define this. What is objectID aimed at{"recipe_name": ObjectId("recipe_name")} 
+    # need to define this. What is objectID aimed at{"recipe_name": ObjectId("recipe_name")}
     mongo.db.RecipeInfo.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for(
