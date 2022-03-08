@@ -34,6 +34,9 @@
 ## 2.1 The business case (Project Goals):
 This website has been designed to give the user the ability to record, ammend and view recipes online anywhere. The owner of the site is also looking to promote a brand of cooking utensils. 
 
+### Site Objectives
+
+
 ## 2.2 Wireframes
 
 ### Sitemap
@@ -49,6 +52,12 @@ This website has been designed to give the user the ability to record, ammend an
 
 ## 2.3 Website Objectives:
 
+* Promote a brand of cooking untensils
+* Allow the user to create a profile
+* Within this profile the user should be able to create and save their own recipes and the assoicated information
+* The user should be able to delete and edit recipes they have created
+* The user should be able to browse community approved recipes
+* The user should be able to log into their profile on any device and easily view their recipes
 
 ## 2.4 Design Inspiration
 
