@@ -4,7 +4,7 @@
 */
 
 .nav_custom {
-  background-color: #388e3c ;
+  background-color: #80b444 ;
   text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -56,7 +56,7 @@ img {
 
 
 .g-col-6 h1 {
-  background-color: rgba(8,156,228,1);
+  background-color: #80b444;
   color: white;
   font-size: 3rem;
 }
@@ -90,7 +90,7 @@ img {
   top: 0%;
   left: 0%;
   width: 100%;
-  background-color: rgba(8,156,228,1);
+  background-color: #80b444;
   margin: 0%;
 }
 
@@ -100,7 +100,7 @@ img {
   top: 50%;
   left: 0%;
   width: 100%;
-  background-color: rgba(8,156,228,1);
+  background-color: #80b444;
   color: white;
 }
 
@@ -112,7 +112,7 @@ img {
       top: 10%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(8,156,228,1);
+      background-color: #80b444;
       width: auto;
       font-size: xx-large;
     }
@@ -124,7 +124,7 @@ img {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(8,156,228,1);
+      background-color: #80b444;
       color: white;
       font-size: xx-small;
     }
@@ -139,7 +139,7 @@ img {
       top: 0%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(8,156,228,1);
+      background-color: #80b444;
       color: white;
       width: 100%;
       font-size: large;
@@ -152,7 +152,7 @@ img {
       top: 63%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(8,156,228,1);
+      background-color: #80b444;
       color: white;
       font-size: xx-small;
       width: 100%;
@@ -453,13 +453,13 @@ label.star:before {
 
 
 .collapsible-header {
-  background-color: rgba(8,156,228,1);
+  background-color: #80b444;
   color: white;
 }
 
 
 .buffer {
-  background-color: rgba(8,156,228,1);
+  background-color: #80b444;
   height: 2px;
   margin: 30px;
 }
@@ -469,7 +469,7 @@ label.star:before {
 }
 
 .links:hover {
-  color: rgba(8,156,228,1); 
+  color: green#80b444; 
   text-decoration: underline;
 }
 
