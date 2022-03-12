@@ -159,6 +159,10 @@
               <td>{{ info.comm_friendly }}</td>
             </tr>
             <tr>
+              <th scope="row">Community username visible? (Yes/No):</th>
+              <td>{{ info.comm_name_show }}</td>
+            </tr>
+            <tr>
               <th scope="row">Cooking Instructions:</th>
               <td>{{ info.cooking }}</td>
             </tr>
@@ -168,8 +172,13 @@
             </tr>
             <tr>
               <th scope="row">External Recipe URL:</th>
-              <td><a href="{{ info.recipe_url }}">{{ info.recipe_url }}</a></td>
-            </tr>            <tr>
+              <td><a href="{{ info.recipe_url }}" target="_blank">{{ info.recipe_url }}</a></td>
+            </tr>            
+            <tr>
+              <th scope="row">Picture Path:</th>
+              <td><a href="{{ info.picpath }}" target="_blank">{{ info.picpath }}</a></td>
+            </tr>   
+            <tr>
               <th scope="row">Category:</th>
               <td>{{ info.category }}</td>
             </tr>
@@ -285,7 +294,6 @@
               <a href="{{ url_for('edit_recipe', recipe_id=info._id) }}">Submit</a>
             </button>
           </form>
-        
         </div>
 
 
