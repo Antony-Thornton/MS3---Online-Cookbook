@@ -29,6 +29,11 @@ main {
 /* Custom CSS */
 
 
+.nav_format {
+  font-size: 125%;
+}
+
+
 img {
   width: 100%;
   height: auto;
