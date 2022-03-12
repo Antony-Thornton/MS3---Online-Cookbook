@@ -127,56 +127,83 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    username = mongo.db.users.find_one({"username": session["user"]})["username"]
 
     if session["user"]:
         user = list(mongo.db.users.find())
         info = list(mongo.db.RecipeInfo.find())
 
     if request.method == "POST":
-        veg = "Vegetarian" if request.form.get("veg") else "No"
-        vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "No" if request.form.get(
-            "comm_friendly") else "Yes"
-        community_name_show = "Yes" if request.form.get(
-            "comm_name_show") else "No"
+        if request.form["action"] == "new":
+            veg = "Vegetarian" if request.form.get("veg") else "No"
+            vegan = "Vegan" if request.form.get("vegan") else "No"
+            community_friendly = "No" if request.form.get("comm_friendly") else "Yes"
+            community_name_show = "Yes" if request.form.get("comm_name_show") else "No"
 
-        form = request.form.to_dict()
-        print(form)
-        # search for a recipe with the recipe name
-        search = mongo.db.RecipeInfo.find_one(
-            {"recipe_name": form["recipe_name"]})
+            form = request.form.to_dict()
+            print(form)
+            # search for a recipe with the recipe name
+            search = mongo.db.RecipeInfo.find_one({"recipe_name": form["recipe_name"]})
 
-        # if their is no recipe with that recipe_name on the form, then None
-        # will be returned. So...
-        if not search:
-            # insert the recipe
-            recipe_add = {
-                "recipe_name": request.form.get("recipe_name"),
-                "feeds": request.form.get("feeds"),
-                "veg": veg,
-                "vegan": vegan,
-                "created_by": session["user"],
-                "cooking": request.form.get("cooking"),
-                "comm_friendly": community_friendly,
-                "ingredients": request.form.get("ingredients"),
-                "picpath": request.form.get("picpath"),
-                "comm_name_show": community_name_show,
-                "recipe_url": request.form.get("recipe_url"),
-                "category": request.form.get("category"),
-            }
-            mongo.db.RecipeInfo.insert_one(recipe_add)
-            flash("Recipe successfully added")
+            # if their is no recipe with that recipe_name on the form, then None
+            # will be returned. So...
+            if not search:
+                # insert the recipe
+                recipe_add = {
+                    "recipe_name": request.form.get("recipe_name"),
+                    "feeds": request.form.get("feeds"),
+                    "veg": veg,
+                    "vegan": vegan,
+                    "created_by": session["user"],
+                    "cooking": request.form.get("cooking"),
+                    "comm_friendly": community_friendly,
+                    "ingredients": request.form.get("ingredients"),
+                    "picpath": request.form.get("picpath"),
+                    "comm_name_show": community_name_show,
+                    "recipe_url": request.form.get("recipe_url"),
+                    "category": request.form.get("category"),
+                }
+                mongo.db.RecipeInfo.insert_one(recipe_add)
+                flash("Recipe successfully added")
             return render_template(
-                "profile.html", username=username, user=user, info=info)
-
+                "profile.html", username=username, user=user, info=info
+            )
         else:
-            flash("Duplicate recipe. Please change name and try again.")
+            if request.method == "POST":
+                if request.form["action"] == "edit":
+                    veg = "Vegetarian" if request.form.get("veg") else "No"
+                    vegan = "Vegan" if request.form.get("vegan") else "No"
+                    community_friendly = (
+                        "No" if request.form.get("comm_friendly") else "Yes"
+                    )
+                    community_name_show = (
+                        "No" if request.form.get("comm_name_show") else "Yes"
+                    )
 
-    return render_template(
-        "profile.html", username=username, user=user, info=info)
+                    mongo.db.RecipeInfo.find_one({"_id: ObjectID()"})
+                    recipe_update = {
+                        "recipe_name": request.form.get("recipe_name"),
+                        "feeds": request.form.get("feeds"),
+                        "veg": veg,
+                        "vegan": vegan,
+                        "created_by": session["user"],
+                        "cooking": request.form.get("cooking"),
+                        "comm_friendly": community_friendly,
+                        "ingredients": request.form.get("ingredients"),
+                        "picpath": request.form.get("picpath"),
+                        "comm_name_show": community_name_show,
+                        "recipe_url": request.form.get("recipe_url"),
+                        "category": request.form.get("category"),
+                    }
+                    mongo.db.RecipeInfo.update({"_id": ObjectId(recipe_id)}, recipe_update)
+                    flash("Recipe Successfully Updated")
+                    return redirect(url_for("profile", username=session["user"]))
+    else:
+        flash("Duplicate recipe. Please change name and try again.")
+
+    return render_template("profile.html", username=username, user=user, info=info)
     return redirect(url_for("login"))
+
 
 
 @app.route("/recipe_page/<username>", methods=["GET", "POST"])
