@@ -29,6 +29,15 @@ main {
 /* Custom CSS */
 
 
+.td_format {
+  max-width: 500px;
+}
+
+
+.td_format_a{
+  max-width: 500px;
+}
+
 .nav_format {
   font-size: 125%;
 }
