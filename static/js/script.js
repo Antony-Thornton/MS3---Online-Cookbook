@@ -22,12 +22,6 @@ $(document).ready(function(){
 
 
 
-$(function() {
-  var b = $("#button");
-  var w = $("#wrapper");
-  b.click(function() {
-    w.toggleClass('open'); /* <-- toggle the application of the open class on click */
-    window.alert("The next step cannot be undone.");
-  });
-
-});
+$('.button_delete').click(function(){
+  $('.wrapper_delete').toggle();
+});  
