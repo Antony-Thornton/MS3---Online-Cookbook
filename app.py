@@ -193,47 +193,6 @@ def recipe_page(username):
         categories = list(mongo.db.RecipeInfo.distinct("category"))
         print(categories)
 
-    if request.method == "POST":
-        veg = "Vegetarian" if request.form.get("veg") else "No"
-        vegan = "Vegan" if request.form.get("vegan") else "No"
-        community_friendly = "No" if request.form.get(
-            "comm_friendly") else "Yes"
-        community_name_show = "No" if request.form.get(
-            "comm_name_show") else "Yes"
-
-        form = request.form.to_dict()
-        print(form)
-        # search for a recipe with the recipe name
-        search = mongo.db.RecipeInfo.find_one(
-            {"recipe_name": form["recipe_name"]})
-
-        # if their is no recipe with that recipe_name on the form, then None
-        # will be returned. So...
-        if not search:
-            # insert the recipe
-            recipe_add = {
-                "recipe_name": request.form.get("recipe_name"),
-                "feeds": request.form.get("feeds"),
-                "veg": veg,
-                "vegan": vegan,
-                "created_by": session["user"],
-                "cooking": request.form.get("cooking"),
-                "comm_friendly": community_friendly,
-                "ingredients": request.form.get("ingredients"),
-                "picpath": request.form.get("picpath"),
-                "comm_name_show": community_name_show,
-                "recipe_url": request.form.get("recipe_url"),
-                "category": request.form.get("category"),
-            }
-            mongo.db.RecipeInfo.insert_one(recipe_add)
-            flash("Recipe successfully added")
-            return render_template(
-                "recipe.html", username=username, user=user, info=info, 
-                categories=categories)
-
-        else:
-            flash("Duplicate recipe. Please change name and try again.")
-
     return render_template(
         "profile.html", username=username, user=user,
         info=info, categories=categories)
