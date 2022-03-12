@@ -131,7 +131,7 @@
     <li>
       <div class="collapsible-header indigo">
         <h5>
-          Delete recipe
+          Manage Recipes
         </h5>
       </div>
       <div class="collapsible-body">
@@ -181,8 +181,115 @@
               
         <button class="button_edit btn-small green accent-4" >Edit Recipe</button>    
         <div class="wrapper_edit" style="display: none;">
-          <h1>FHdksjfhikdjs</h1>
-        <a href="{{ url_for('edit_recipe', recipe_id=info._id) }}" class="btn-small green accent-4">Submit</a>
+          <form class="col s12" method="post">
+            <div class="row">
+              <h5>Edit recipe for "{{info.recipe_name}}"</h5>
+              <div class="input-field col s6">
+                <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" type="text" class="validate" required>
+                <label for="recipe_name">Recipe Name</label>
+              </div>
+            </div>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" name="veg" />
+                <span>Vegetarian?</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" name="vegan" />
+                <span>Vegan?</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" name="comm_recipe" />
+                <span>Community Friendly?</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" name="comm_name_show" />
+                <span>Username visible to community?</span>
+              </label>
+            </p>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="feeds"class="materialize-textarea" style="width: 10%;" required></textarea>
+                  <label for="textarea1">Feeds</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="cooking" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Cooking Instructions</label>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <div class="tooltip" required>Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Ingredients</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <div class="tooltip" required>Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Picture URL</label>
+                </div>
+              </div>
+              <div class="input-field col s12">
+                <div class="tooltip" required>Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="recipe_url" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Recipe URL</label>
+                </div>
+              </div>
+              <div class="input-field col s12">
+                <div class="tooltip" required>Recipe URL Information <span class="tooltiptext">If the recipe can be found on an external site please enter the URL here.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" name="category" class="materialize-textarea" required></textarea>
+                  <label for="textarea1">Category</label>
+                </div>
+              </div>
+              <div class="input-field col s12">
+                <div class="tooltip">Category Instructions<span class="tooltiptext">Add a category to your recipe. For example Breakfast/Quick/Vegetarian.</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn-small green accent-4" style="font: white;" type="submit" name="action">
+              <a href="{{ url_for('edit_recipe', recipe_id=info._id) }}">Submit</a>
+            </button>
+          </form>
+        
         </div>
 
 
