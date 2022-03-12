@@ -228,12 +228,15 @@ def recipe_page(username):
             mongo.db.RecipeInfo.insert_one(recipe_add)
             flash("Recipe successfully added")
             return render_template(
-                "recipe.html", username=username, user=user, info=info, categories=categories)
+                "recipe.html", username=username, user=user, info=info, 
+                categories=categories)
 
         else:
             flash("Duplicate recipe. Please change name and try again.")
 
-    return render_template("profile.html", username=username, user=user, info=info, categories=categories)
+    return render_template(
+        "profile.html", username=username, user=user,
+        info=info, categories=categories)
     # return redirect(url_for("login"))
 
 
@@ -249,7 +252,8 @@ def logout():
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     # Mongo db link - mongo.db.RecipeInfo.remove()
-    # need to define this. What is objectID aimed at{"recipe_name": ObjectId("recipe_name")}
+    # need to define this. What is objectID aimed at{
+    # "recipe_name": ObjectId("recipe_name")}
     mongo.db.RecipeInfo.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for(
@@ -258,12 +262,35 @@ def delete_recipe(recipe_id):
 
 @app.route("/edit/<recipe_id>")
 def edit_recipe(recipe_id):
-    mongo.db.RecipeInfo.find_one({"_id: ObjectID()"})
-    flash("Recipe Successfully Updated")
-    return redirect(url_for(
-        "profile", username=session["user"]))
+    if request.method == "POST":
+        veg = "Vegetarian" if request.form.get("veg") else "No"
+        vegan = "Vegan" if request.form.get("vegan") else "No"
+        community_friendly = "No" if request.form.get(
+            "comm_friendly") else "Yes"
+        community_name_show = "No" if request.form.get(
+            "comm_name_show") else "Yes"
 
+        mongo.db.RecipeInfo.find_one({"_id: ObjectID()"})
+        recipe_update = {
+                    "recipe_name": request.form.get("recipe_name"),
+                    "feeds": request.form.get("feeds"),
+                    "veg": veg,
+                    "vegan": vegan,
+                    "created_by": session["user"],
+                    "cooking": request.form.get("cooking"),
+                    "comm_friendly": community_friendly,
+                    "ingredients": request.form.get("ingredients"),
+                    "picpath": request.form.get("picpath"),
+                    "comm_name_show": community_name_show,
+                    "recipe_url": request.form.get("recipe_url"),
+                    "category": request.form.get("category"),
+                }
+        mongo.db.RecipeInfo.update({"_id": ObjectId(recipe_id)}, recipe_update)
+        flash("Recipe Successfully Updated")
+        return redirect(url_for(
+            "profile", username=session["user"]))
 
+        
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
