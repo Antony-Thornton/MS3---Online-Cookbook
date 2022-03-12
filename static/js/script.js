@@ -25,3 +25,9 @@ $(document).ready(function(){
 $('.button_delete').click(function(){
   $('.wrapper_delete').toggle();
 });  
+
+
+
+$('.button_edit').click(function(){
+  $('.wrapper_edit').toggle();
+});  
