@@ -18,3 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.collapsible').collapsible();
 });
+
+
+
+
+$(function() {
+  var b = $("#button");
+  var w = $("#wrapper");
+  b.click(function() {
+    w.toggleClass('open'); /* <-- toggle the application of the open class on click */
+    window.alert("The next step cannot be undone.");
+  });
+
+});

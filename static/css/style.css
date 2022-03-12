@@ -467,3 +467,14 @@ label.star:before {
   color: rgba(8,156,228,1); 
   text-decoration: underline;
 }
+
+
+#wrapper {
+  background: #ccc;
+  overflow: hidden;
+  transition: max-height 300ms;
+  max-height: 0; /* <---hide by default */
+}
+#wrapper.open {
+  max-height: 100px; /* <---when open, allow content to expand to take up as much height as it needs, up to e.g. 100px */
+}
