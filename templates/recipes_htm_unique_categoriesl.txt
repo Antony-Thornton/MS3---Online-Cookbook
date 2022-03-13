@@ -1,0 +1,140 @@
+I tried with code Institute to implement a feature where categories would be displayed see 
+
+
+See instructions from tutor
+﻿right now, in your python you have a list of recipes that are only created by the currently logged in user. So you next step is to create a dictionary, just like we did previously where the key is the category name, and its value is a list of objects from that category.
+You need to start the dictioanry on line 56
+
+See this section below
+@app.route("/recipes", methods=["GET", "POST"])
+def recipes():
+    info = list(mongo.db.RecipeInfo.find({"created_by": session["user"].lower()}).sort('category'))
+    # info = [x for x in info if x['created_by'].lower() == session['user'].lower()]
+    print(info)
+*** Line 56 ***
+    categories = {}
+    distinct_categories = list(mongo.db.RecipeInfo.distinct("category"))
+
+    for category in distinct_categories:
+        recipes = list(mongo.db.RecipeInfo.find({"category": category}))
+        categories[category] = recipes
+
+    return render_template(
+        "recipes.html", info=info, categories=categories, recipes=recipes)
+
+
+{% extends "base.html" %}
+{% block content %}
+<section class="container" style="text-align: center;">
+  <h1 class="col s12 light-green-text text-darken-4 move_to_top">All of your recipes in one place</h1>
+  <h3>Browse and edit your recipes here</h3>
+  <div class="">
+    <div class="row card-panel grey lighten-5">
+      <form action="{{ url_for('search_recipes') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+          <div class="input-field col s12 m8">
+            <i class="fas fa-search prefix light-green-text text-darken-4"></i>
+            <input type="text" name="query" id="query" minlength="3" class="validate" required>
+            <label for="query">Search Reciepes</label>
+          </div>
+          <div class="col s12 m4">
+            <a href="{{ url_for('recipe_page', username=session['user']) }}" class="red btn text-shadow">Reset</a>
+            <button type="submit" class="light-green darken-4 btn text-shadow">
+              <i class="fas fa-search left"></i> Search </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="collapsible_form" style="text-align: left;">
+      {% for item in info %}
+        <div>Category: {{ item.category }}</div>
+        <div>Recipe Name: {{ item.recipe_name }}</div>
+        <hr/>
+      {% endfor %}
+
+      {% for info in info %}
+        {% if session.user|lower == info.created_by|lower %}
+          <ul class="collapsible">
+            {% for key, value in categories.items() %}
+              <li>
+                <div class="collapsible-header light-green darken-4">
+                  <h5>{{ key }}</h5>
+                </div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    {% for recipe in value %}
+                      {% if recipe|length > 0 %}
+                        <div class="card">
+                          <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ recipe.picpath }}">
+                          </div>
+                          <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                              <h1>{{ recipe.recipe_name }}</h1>
+                              <i class="material-icons right">Open</i>
+                            </span>
+                          </div>
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">
+                              <h4>{{ recipe.recipe_name }}</h4>
+                              <i class="material-icons right">close</i>
+                            </span>
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Feeds:</th>
+                                  <td>{{ recipe.feeds }}</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Vegetarian (Yes/No):</th>
+                                  <td>{{ recipe.veg }}</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Vegan (Yes/No):</th>
+                                  <td>{{ recipe.vegan }}</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Username visible to community:</th>
+                                  <td>{{ recipe.comm_name_show }}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div style="text-align: left;">
+                              <h4>Cooking Instuctions:</h4>
+                              <br>
+                              <p>{{ recipe.cooking}}</p>
+                            </div>
+                            <div style="text-align: left;">
+                              <h4>Ingredients:</h4>
+                              <br>
+                              <p>{{ recipe.ingredients}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}  
+                    {% endfor %}
+                  </li>
+              {% endfor %}
+          </ul>
+        {% else %} 
+          <h3>
+            Your recipe list appears to be empty. To submit a recipe please click 
+            <a href="{{ url_for('profile', username=session['user']) }}" class="links" style="text-align: center; color: red;">
+              here
+            </a>
+            .
+          </h3> 
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+
+<!-- {% for key, value in categories.items() %}
+  <h1>{{ key }}</h1>
+  {% for recipe in value %}
+    <p>{{ recipe.recipe_name }}</p>   
+  {% endfor %}
+{% endfor %} -->
+
+  {% endblock %}
