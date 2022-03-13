@@ -2,7 +2,7 @@
 
 # MS3---Online-Cookbook
 
-# Online Cookbook
+# The Veggie Guy - Cookbook
 
 # Contents
 
@@ -43,7 +43,7 @@
     * ReadMe is in a good position with small updates and spelling checks required
     * Testing needs to be created and completed.
     * Need to tidy up code structure and layout
-    
+
    
 
 
@@ -54,13 +54,22 @@
 # User Story
 ## 2.1 The business case (Project Goals):
 
-    This website has been designed to give the user the ability to record, ammend and view recipes online anywhere. The owner of the site is also looking to promote a brand of cooking utensils. The website owner would like to generate additional traffic to his website to help increase sales. In order to do so the site needs to have the ability to bring users back. This will be achieved by allowing the user to create and save recipes that they can access anywhere.
+    This website has been designed to give the user the ability to record, ammend and view recipes online anywhere.
+    
+    The owner of the site is also looking to promote a brand of cooking utensils. 
+    
+    The website owner would like to generate additional traffic to his website to help increase sales. 
+    
+    In order to do so the site needs to have the ability to bring users back. 
+    
+    This will be achieved by allowing the user to create and save recipes that they can access anywhere.
 
 
 ## 2.2 Wireframes
 
 ## Sitemap
 
+![index web](static/assets/images/site_map.jpg)
 
 ## Wireframes
 ![index web](static/assets/images/Wireframes/base_template.jpg)
@@ -89,7 +98,9 @@
 
 ## 2.4 Design Inspiration
 
-    The design inspiration came from the mini project in the code insitute course. I used a combination of https://materializecss.com/ and the template provided by the course to come up with the main structure for the site.
+    The design inspiration came from the mini project in the code insitute course. 
+    I used a combination of https://materializecss.com/ and the template provided by the course 
+        to come up with the main structure for the site.
 
 <br>
 <br>
