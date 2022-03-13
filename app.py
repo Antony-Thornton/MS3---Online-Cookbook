@@ -46,7 +46,7 @@ def search_recipes():
     info = list(mongo.db.RecipeInfo.find({"$text": {"$search": query}}))
     # print(info)
     # print("issue")
-    return render_template("profile.html", info=info)
+    return render_template("recipes.html", info=info)
 
 
 @app.route("/recipes", methods=["GET", "POST"])
@@ -155,7 +155,7 @@ def recipe_page(username):
         print(categories)
 
     return render_template(
-        "profile.html", username=username, user=user,
+        "recipes.html", username=username, user=user,
         info=info, categories=categories)
     # return redirect(url_for("login"))
 
