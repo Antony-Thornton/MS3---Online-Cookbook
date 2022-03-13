@@ -21,54 +21,54 @@
       </form>
     </div>
     <div>
-      {% for info in info %}
-        {% if info|length > 0 %}    
-          {% if session.user|lower == info.created_by|lower %}
+      {% for information in info %}
+        {% if information|length > 0 %}    
+          {% if session.user|lower == information.created_by|lower %}
  
             <div class="card"style="max-width: 700px; margin-left: auto;margin-right: auto;">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ info.picpath }}">
+                <img class="activator" src="{{ information.picpath }}">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">
-                  <h1>{{ info.recipe_name }}</h1>
+                  <h1>{{ information.recipe_name }}</h1>
                   <i class="material-icons center">Open</i>
                 </span>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">
-                  <h4>{{ info.recipe_name }}</h4>
+                  <h4>{{ information.recipe_name }}</h4>
                   <i class="material-icons center">close</i>
                 </span>
                 <table class="table">
                   <tbody>
                     <tr>
                       <th scope="row">Feeds:</th>
-                      <td>{{ info.feeds }}</td>
+                      <td>{{ information.feeds }}</td>
                     </tr>
                     <tr>
                       <th scope="row">Vegetarian (Yes/No):</th>
-                      <td>{{ info.veg }}</td>
+                      <td>{{ information.veg }}</td>
                     </tr>
                     <tr>
                       <th scope="row">Vegan (Yes/No):</th>
-                      <td>{{ info.vegan }}</td>
+                      <td>{{ information.vegan }}</td>
                     </tr>
                     <tr>
                       <th scope="row">Username visible to community:</th>
-                      <td>{{ info.comm_name_show }}</td>
+                      <td>{{ information.comm_name_show }}</td>
                     </tr>
                   </tbody>
                 </table>
                 <div style="text-align: left;">
                   <h4>Cooking Instuctions:</h4>
                   <br>
-                  <p>{{ info.cooking}}</p>
+                  <p>{{ information.cooking}}</p>
                 </div>
                 <div style="text-align: left;">
                   <h4>Ingredients:</h4>
                   <br>
-                  <p>{{ info.ingredients}}</p>
+                  <p>{{ information.ingredients}}</p>
                 </div>
               </div>
             </div>

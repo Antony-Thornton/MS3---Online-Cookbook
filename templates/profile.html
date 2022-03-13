@@ -137,63 +137,63 @@
       <div class="collapsible-body">
         <h5>Your recipe list</h5>
         <div class="buffer"></div>
-        {% for info in info %} 
-        {% if session.user|lower == info.created_by|lower %}
+        {% for information in info %} 
+        {% if session.user|lower == information.created_by|lower %}
         <table class="table">
-          <h3>{{ info.recipe_name }}</h3>
+          <h3>{{ information.recipe_name }}</h3>
           <tbody>
             <tr>
               <th scope="row">Feeds:</th>
-              <td class="td_format">{{ info.feeds }}</td>
+              <td class="td_format">{{ information.feeds }}</td>
             </tr>
             <tr>
               <th scope="row">Vegetarian (Yes/No):</th>
-              <td class="td_format">{{ info.veg }}</td>
+              <td class="td_format">{{ information.veg }}</td>
             </tr>
             <tr>
               <th scope="row">Vegan (Yes/No):</th>
-              <td class="td_format">{{ info.vegan }}</td>
+              <td class="td_format">{{ information.vegan }}</td>
             </tr>
             <tr>
               <th scope="row">Community Friendly? (Yes/No):</th>
-              <td class="td_format">{{ info.comm_friendly }}</td>
+              <td class="td_format">{{ information.comm_friendly }}</td>
             </tr>
             <tr>
               <th scope="row">Community username visible? (Yes/No):</th>
-              <td class="td_format">{{ info.comm_name_show }}</td>
+              <td class="td_format">{{ information.comm_name_show }}</td>
             </tr>
             <tr>
               <th scope="row">Cooking Instructions:</th>
-              <td class="td_format">{{ info.cooking }}</td>
+              <td class="td_format">{{ information.cooking }}</td>
             </tr>
             <tr>
               <th scope="row">Ingredients:</th>
-              <td class="td_format">{{ info.ingredients }}</td>
+              <td class="td_format">{{ information.ingredients }}</td>
             </tr>
             <tr>
               <th scope="row">External Recipe URL:</th>
-              <td class="td_format"><a class="td_format_a" href="{{ info.recipe_url }}" target="_blank">External Link</a></td>
+              <td class="td_format"><a class="td_format_a" href="{{ information.recipe_url }}" target="_blank">External Link</a></td>
             </tr>            
             <tr>
               <th scope="row">Picture Path:</th>
-              <td class="td_format"><a class="td_format_a"  href="{{ info.picpath }}" target="_blank">External Link</a></td>
+              <td class="td_format"><a class="td_format_a"  href="{{ information.picpath }}" target="_blank">External Link</a></td>
             </tr>   
             <tr>
               <th scope="row">Category:</th>
-              <td class="td_format">{{ info.category }}</td>
+              <td class="td_format">{{ information.category }}</td>
             </tr>   
           </tbody>
         </table>
               
         <button class="button_edit btn-small green accent-4" >Edit Recipe</button>    
         <div class="wrapper_edit" style="display: none;">
-          <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=info._id) }}">
+          <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=information._id) }}">
             <div class="row">
-              <h5>Edit recipe for "<h3>{{info.recipe_name}}"</h3></h5>
+              <h5>Edit recipe for "<h3>{{information.recipe_name}}"</h3></h5>
             </div>
             <div class="input-field col s6" style="display: none;">
-              <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" value="{{ info.recipe_name }}" type="text" class="validate" required>
-              <label for="recipe_name">{{info.recipe_name}}</label>
+              <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" value="{{ information.recipe_name }}" type="text" class="validate" required>
+              <label for="recipe_name">{{information.recipe_name}}</label>
             </div>
             <p>
               <label>
@@ -222,7 +222,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="feeds"class="materialize-textarea" style="width: 10%;" required>{{info.feeds}}</textarea>
+                  <textarea id="textarea1" name="feeds"class="materialize-textarea" style="width: 10%;" required>{{information.feeds}}</textarea>
                   <label for="textarea1">Feeds</label>
                 </div>
               </div>
@@ -230,7 +230,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="cooking" class="materialize-textarea" required>{{info.cooking}}</textarea>
+                  <textarea id="textarea1" name="cooking" class="materialize-textarea" required>{{information.cooking}}</textarea>
                   <label for="textarea1">Cooking Instructions</label>
                 </div>
                 <div class="row">
@@ -244,7 +244,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required>{{info.ingredients}}</textarea>
+                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required>{{information.ingredients}}</textarea>
                   <label for="textarea1">Ingredients</label>
                 </div>
               </div>
@@ -258,7 +258,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required>{{info.picpath}}</textarea>
+                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required>{{information.picpath}}</textarea>
                   <label for="textarea1">Picture URL</label>
                 </div>
               </div>
@@ -270,7 +270,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="recipe_url" class="materialize-textarea" required>{{info.recipe_url}}</textarea>
+                  <textarea id="textarea1" name="recipe_url" class="materialize-textarea" required>{{information.recipe_url}}</textarea>
                   <label for="textarea1">Recipe URL</label>
                 </div>
               </div>
@@ -282,7 +282,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="category" class="materialize-textarea" required>{{info.category}}</textarea>
+                  <textarea id="textarea1" name="category" class="materialize-textarea" required>{{information.category}}</textarea>
                   <label for="textarea1">Category</label>
                 </div>
               </div>
@@ -300,7 +300,7 @@
         <div class="wrapper_delete" style="display: none;">
         <h4>!!! WARNING !!!</h4>
         <h6>This next step cannot be undone. If you click delete this recipe will be deleted forever.</h6>
-        <a href="{{ url_for('delete_recipe', recipe_id=info._id) }}" class="btn-small red accent-4">Delete</a>
+        <a href="{{ url_for('delete_recipe', recipe_id=information._id) }}" class="btn-small red accent-4">Delete</a>
       </div>
     
         <div class="buffer"></div>
