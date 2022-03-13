@@ -1,42 +1,49 @@
 
 # MS3 -- Online Cookbook
 
-# Online Cookbook
+# The Veggie Guy - Cookbook
 
 # Testing Contents
 
 
 
-## [Testing](#testing "Testing")
-* 4.1 Informal
-* 4.2 Formal
-    - 4.2.1 External Website Testing
-     + 4.2.1.1 Testing Results
-    - 4.2.2 Functionality Testing
-    - 4.2.3 Device Testing
-    - 4.2.4 Spelling and Grammar
-* 4.3 Build in Progress Bugs
-* 4.4 Testing Bugs
+## [1. Testing](#testing "Testing")
+## [2. Informal](#informal "Informal")
+## [3. Formal](#formal "Formal")
+        External Website Testing
+        Testing Results
+        Functionality Testing
+        Device Testing
+        Spelling and Grammar
+## [4. Build in Progress Bugs](#build-in-progress-bugs "Build in Progress Bugs")
+## [5. Testing Bugs](#testing-bugs "Testing Bugs")
+
 
 # Testing
 
-## 4.1 Informal Development Testing
 
-## 4.2 Formal Deployment Testing
-### 4.2.1 External website testing
-
-### 4.2.1.1 Testing Results
-
-### 4.2.2 Functionality Testing
+## Informal
+### Informal Development Testing
 
 
-### 4.2.3 Device Testing
+## Formal
 
 
-### 4.2.4 Spelling
+## 3.2 Formal Deployment Testing
+### 3.2.1 External website testing
 
-### 4.2.5 User testing and feedback
+### 3.2.1.1 Testing Results
 
-## 4.3 Build in Progress Bugs
+### 3.2.2 Functionality Testing
 
-## 4.4 Testing Bugs
+
+### 3.2.3 Device Testing
+
+
+### 3.2.4 Spelling
+
+### 3.2.5 User testing and feedback
+
+## Build in Progress Bugs
+
+## Testing Bugs
