@@ -51,8 +51,10 @@ def search_recipes():
 
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
-    info = list(mongo.db.RecipeInfo.find())
-
+    info = list(mongo.db.RecipeInfo.find({"created_by": session["user"].lower()}).sort('category'))
+    # info = [x for x in info if x['created_by'].lower() == session['user'].lower()]
+    print(info)
+    
     categories = {}
     distinct_categories = list(mongo.db.RecipeInfo.distinct("category"))
 
