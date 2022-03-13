@@ -121,7 +121,7 @@ It is really important to include responsive design in this project as many user
 #### [Go To Top](#table-of-contents "Go To Top")
 
 ### Font and colors:
-Colors used can be found <a href="https://materializecss.com/color.html">here</a>.
+Colors used can be found <a href="https://materializecss.com/color.html" target="_blank">here</a>.
 
 Fonts used have been pulled through using materializecss.
 
@@ -132,28 +132,28 @@ Fonts used have been pulled through using materializecss.
 # 3. Technologies Used
 #### [Go To Top](#table-of-contents "Go To Top")
 
-* <a href="https://html.com/html5/">HTML 5</a>  
+* <a href="https://html.com/html5/" target="_blank">HTML 5</a>  
     * The project uses HyperText Markup Language
-* <a href="https://en.wikipedia.org/wiki/CSS">CSS3</a>
+* <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS3</a>
     * The project uses Cascading Style Sheets 
-* <a href="https://www.javascript.com/">JavaScript</a>
+* <a href="https://www.javascript.com/" target="_blank">JavaScript</a>
     * The project uses JavaScript
-* <a href="https://www.python.org/">Python</a>
+* <a href="https://www.python.org/" target="_blank">Python</a>
     * The project uses Python
-* <a href="https://materializecss.com/">Materialize</a>
+* <a href="https://materializecss.com/" target="_blank">Materialize</a>
     * The project uses Materialize css structuring
 
-* <a href="https://balsamiq.com/wireframes/">Balsamiq Wireframes</a>
+* <a href="https://balsamiq.com/wireframes/" target="_blank">Balsamiq Wireframes</a>
     * Balsamiq was used to create the wireframes during the design process
-* <a href="https://www.gitpod.io/">Gitpod</a>
+* <a href="https://www.gitpod.io/" target="_blank">Gitpod</a>
     * The project uses Gitpod
-* <a href="https://github.com/">GitHub</a>
+* <a href="https://github.com/" target="_blank">GitHub</a>
     * GitHub was used to store the project's code after being pushed from Git
-* <a href="https://www.heroku.com/">Heroku</a>
+* <a href="https://www.heroku.com/" target="_blank">Heroku</a>
     * The project uses Heroku to host the website
-* <a href="https://www.google.co.uk/chrome/">Chrome</a>
+* <a href="https://www.google.co.uk/chrome/" target="_blank">Chrome</a>
     * The project uses Chrome to debug and test the source code using HTML5
-* <a href="https://beautifier.io/">Code beutifier</a>
+* <a href="https://beautifier.io/" target="_blank">Code beutifier</a>
     * Corrects Javascript/HTML/CSS code with correct spacing/lines etc.
 
 
@@ -231,7 +231,7 @@ Due to a course break and a lack of initial understanding of the course material
 #### [Go To Top](#table-of-contents "Go To Top")
 
 ## Code
-* <a href="https://www.lakeland.co.uk/" target="_blank">LakeLand for tool page cotent</a>
+
 
 * <a href="https://materializecss.com/" target="_blank">Website structure and inspiration</a>
 
@@ -241,9 +241,11 @@ Due to a course break and a lack of initial understanding of the course material
 
 ## Content
 
-* <a href="https://www.bbcgoodfood.com/" target="_blank">Recipe Idea's - BBC Good Food</a>
+* <a href="https://www.lakeland.co.uk/" target="_blank">LakeLand for tool page cotent</a>
 
-* <a href="https://www.pexels.com/" target="_blank">For pictures - Artists can be found in /static/assets/images</a>
+* Recipe Idea's - <a href="https://www.bbcgoodfood.com/" target="_blank">BBC Good Food</a>
+
+* <a href="https://www.pexels.com/" target="_blank">For pictures</a> - Artists can be found <a href="https://github.com/Antony-Thornton/MS3---Online-Cookbook/tree/main/static/assets/images">here</a>.
 
 
 
