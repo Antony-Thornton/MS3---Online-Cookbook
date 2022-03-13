@@ -192,7 +192,7 @@
               <h5>Edit recipe for "<h3>{{info.recipe_name}}"</h3></h5>
             </div>
             <div class="input-field col s6" style="display: none;">
-              <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" type="text" class="validate" required>
+              <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" value="{{ info.recipe_name }}" type="text" class="validate" required>
               <label for="recipe_name">{{info.recipe_name}}</label>
             </div>
             <p>
@@ -291,9 +291,7 @@
                 </div>
               </div>
             </div>
-            <button class="button_delete btn-small green accent-4" type="submit">
-              Submit
-            </button>
+            <input class="btn-small green accent-4 edit-btn" type="submit" value="Submit"></input>
           </form>
         </div>
 

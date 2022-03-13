@@ -30,3 +30,9 @@ $('.button_edit').click(function(){
   $('.wrapper_edit').toggle();
 });  
 /* End toggle buttons */
+
+const editForms = document.querySelectorAll('.edit-btn');
+editForms.forEach(input => input.addEventListener('click', event => {
+  const form = event.target.parentNode;
+  form.submit();
+}))

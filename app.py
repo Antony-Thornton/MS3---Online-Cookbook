@@ -189,7 +189,9 @@ def edit_recipe(recipe_id):
         community_name_show = "No" if request.form.get(
             "comm_name_show") else "Yes"
 
-        mongo.db.RecipeInfo.find_one({"_id: ObjectID()"})
+        form = request.form.to_dict()
+        print(form)
+        mongo.db.RecipeInfo.find_one({"recipe_name": form["recipe_name"]})
         recipe_update = {
                     "recipe_name": request.form.get("recipe_name"),
                     "feeds": request.form.get("feeds"),
@@ -204,7 +206,8 @@ def edit_recipe(recipe_id):
                     "recipe_url": request.form.get("recipe_url"),
                     "category": request.form.get("category"),
                 }
-        mongo.db.RecipeInfo.update({"_id": ObjectId(recipe_id)}, recipe_update)
+        print(recipe_update)
+        mongo.db.RecipeInfo.update_one({"recipe_name": form["recipe_name"]}, {"$set": recipe_update})
         flash("Recipe Successfully Updated")
         return redirect(url_for(
             "profile", username=session["user"]))
