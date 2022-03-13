@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %} 
 
 <section class="container" style="text-align: center;">
-  <h1 class="col s12 light-green-text text-darken-4 move_to_top">Welcome back {{ username }}.</h1>
+  <h1 class="col s12 light-green-text text-darken-4 move_to_top" style="font-size: 200%;">Welcome back {{ username }}.</h1>
   <h3>Browse your account here.</h3>
 
 
@@ -185,7 +185,13 @@
           </tbody>
         </table>
               
-        <button class="button_edit btn-small green accent-4" >Edit Recipe</button>    
+        <button class="button_edit btn-small green accent-4" >Edit Recipe</button>  
+        <button class="button_delete btn-small red accent-4" >Delete Recipe</button>    
+        <div class="wrapper_delete" style="display: none;">
+          <h4>!!! WARNING !!!</h4>
+          <h6>This next step cannot be undone. If you click delete this recipe will be deleted forever.</h6>
+          <a href="{{ url_for('delete_recipe', recipe_id=information._id) }}" class="btn-small red accent-4">Delete</a>
+       </div>  
         <div class="wrapper_edit" style="display: none;">
           <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=information._id) }}">
             <div class="row">
@@ -296,12 +302,7 @@
         </div>
 
 
-        <button class="button_delete btn-small red accent-4" >Delete Recipe</button>    
-        <div class="wrapper_delete" style="display: none;">
-        <h4>!!! WARNING !!!</h4>
-        <h6>This next step cannot be undone. If you click delete this recipe will be deleted forever.</h6>
-        <a href="{{ url_for('delete_recipe', recipe_id=information._id) }}" class="btn-small red accent-4">Delete</a>
-      </div>
+
     
         <div class="buffer"></div>
         {% endif %}  
@@ -316,32 +317,20 @@
       </div>
       <div class="collapsible-body">
         <h5>View your account details</h5>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <h5>
+          <div>
                   Username:
-                </h5>
-              </td>
-              <td>{{username}}</td>
-            </tr>
-            <tr>
-              <td>
-                <h5>
+                {{username}}
+           
                   Registered Email:
-                </h5>
-              </td>
+
               {% for user in user %}
               {% if session.user|lower == user.username|lower %}
-                <td>
+         
                   {{ user.email }}
-                </td>
+  
               {% endif %}  
               {% endfor %}  
-            </tr>
-          </tbody>
-        </table>
+            </div>
       </div>
     </li>
   </ul>
