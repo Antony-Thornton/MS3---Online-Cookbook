@@ -127,6 +127,8 @@
         * Losing the app.py file and other elements when opening a workspace
                 - I had to work with CI to understand that workspaces exist and that I had
                 to pin and reload each time - https://gitpod.io/workspaces
+        * Open floating outside of the card bug 
+                - Moved to center oc card instead
         
 
 
