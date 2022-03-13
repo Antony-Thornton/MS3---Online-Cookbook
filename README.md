@@ -126,7 +126,16 @@
     Improved delete recipe functionality - Currently uses javascript to display 
     a message but would like to add a proper warning/confirmation message.
 
+    Unique categories on my recipes - I tried with CI help to get a list of unique 
+    categories to display for each user but I couldnt get it working in time for submission. 
+    See below two images for details. Instructions can also be seen in the 
+    "recipes_html_unique_categoriesl.txt" file.
+    
+    https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_unique_categoriesl.txt.
 
+
+![index web](static/assets/images/unique_categories_list.jpg)
+![index web](static/assets/images/unique_categories_list_example.jpg)
 
 ## 3.3 Technologies Used
 <br>
