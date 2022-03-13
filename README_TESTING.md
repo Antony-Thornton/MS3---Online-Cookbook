@@ -47,7 +47,7 @@
 ## 3.1 External website testing
 
 | Page | Date Checked | Result
-| :---: | :---: | :---: 
+| :--- | :--- | :--- 
 | Base.html | |
 | Community.html |  |
 | Home.html |  |
@@ -69,7 +69,7 @@
 ## 3.2 Functionality Testing
 
 | Page | Date Checked | Result
-| :---: | :---: | :---: 
+| :--- | :--- | :--- 
 | Base.html | |
 | Community.html |  |
 | Home.html |  |
@@ -90,7 +90,7 @@
 ## 3.3 Device Testing
 
 | Page | Date Checked | Result
-| :---: | :---: | :---: 
+| :--- | :--- | :--- 
 | Base.html | |
 | Community.html |  |
 | Home.html |  |
