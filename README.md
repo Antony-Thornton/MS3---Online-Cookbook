@@ -170,12 +170,13 @@ Gitpod - The project uses Gitpod - https://www.gitpod.io/
 
 GitHub - GitHub was used to store the project's code after being pushed from Git - https://github.com/
 
+Heroku - The project uses Heroku to host the website - https://www.heroku.com/
+
 Chrome - The project uses Chrome to debug and test the source code using HTML5 - https://www.google.co.uk/chrome/
 
 JavaScript code beutifier - https://beautifier.io/ - Corrects Javascript/HTML/CSS code with correct spacing/lines etc.
 
 Am I responsive - http://ami.responsivedesign.is/
-
 
 
 <br>
