@@ -1,4 +1,4 @@
-![index web](documentation-assets/wireframe-images/ms2_memory_game_device_screenshots.jpg)
+![index web](static/assets/images/readme_lead_image.jpg)
 
 # MS3---Online-Cookbook
 
@@ -54,12 +54,16 @@
 ## Sitemap
 
 
-
-## Mobile Wireframes
-
-## Computer Wireframes
-
-
+## Wireframes
+![index web](static/assets/images/Wireframes/base_template.jpg)
+![index web](static/assets/images/Wireframes/home_pages.jpg)
+![index web](static/assets/images/Wireframes/cooking_tools.jpg)
+![index web](static/assets/images/Wireframes/community_recipes.jpg)
+![index web](static/assets/images/Wireframes/my_recipes.jpg)
+![index web](static/assets/images/Wireframes/profile_page_list_items.jpg)
+![index web](static/assets/images/Wireframes/profile_page_form.jpg)
+![index web](static/assets/images/Wireframes/profile_page_manage_recipes.jpg)
+![index web](static/assets/images/Wireframes/profile_page_user_info.jpg)
 
 
 ## 2.3 Website Objectives:
