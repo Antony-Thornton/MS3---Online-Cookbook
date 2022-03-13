@@ -1,31 +1,33 @@
+# The Veggie Guy Online Cookbook
+## Introuduction
+Welcome to my third project. This project is a simple online cookbook that allows users to manage their own recipes remotely. This will use languages such as Django, Python, HTML, CSS and JavaScript.
+
+This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and table booking.
+
+A live website can be found here.
+
 ![index web](static/assets/images/readme_lead_image.jpg)
 
-# MS3---Online-Cookbook
+# Table of Contents
 
-# The Veggie Guy - Cookbook
-
-
-
-# Contents
-
-## [1. Project Status](#project-status "1. Project Status")
-## [2. User Story](#user-story "2. User Story")
+* [1. Project Status](#project-status "1. Project Status")
+* [2. UX](#user-story "2. User Story")
     * 2.1 The Business Case (Project Goals)
     * 2.2 Wireframes
-## [3. Features](#features "3. Features")
+* [3. Features](#features "3. Features")
     * 3.1 Existing Features
     * 3.2 Features Left to Implement
     * 3.3 Technologies Used
-## [4. Deployment](#deployment "4. Deployment")
+* [4. Deployment](#deployment "4. Deployment")
     * 4.1 Local
-## [5. Credits](#credits "5. Credits")
+* [5. Credits](#credits "5. Credits")
     * 5.1 Content
     * 5.2 Media
     * 5.3 Acknowledgements
-## [6. Lessons Learnt](#lessons-learnt "6. Lessons Learnt")
+* [6. Lessons Learnt](#lessons-learnt "6. Lessons Learnt")
     * 6.1 Lessons
     * 6.2 Future Study Points
-## [Testing Information](#testing-information "Testing Information")
+* [Testing Information](#testing-information "Testing Information")
 
 #
 # Project Status
