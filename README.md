@@ -10,8 +10,6 @@
 ## [2. User Story](#user-story "2. User Story")
     * 2.1 The Business Case (Project Goals)
     * 2.2 Wireframes
-    * 2.3 Website Objectives
-    * 2.4 Design Inspiration
 ## [3. Features](#features "3. Features")
     * 3.1 Existing Features
     * 3.2 Features Left to Implement
@@ -34,7 +32,17 @@
     * Most of the structure is in place
     * Some changes to the CSS are required in order to fix display issues
     * Testing needs to be created and completed
-    * Some wording changes need to be completed in the python code. At the moment it says info for info which is bad practice
+    * Some wording changes need to be completed in the python code. 
+        At the moment it says info for info which is bad practice
+    
+    Update as of - 13/03/2022
+    * CRUD functionality seems to be working.
+        The user can now create, edit, delete and update recipes
+    * The community recipe page is currently looping through ALL users in the database
+        and repeating recipes
+    * ReadMe is in a good position with small updates and spelling checks required
+    * Testing needs to be created and completed.
+    * Need to tidy up code structure and layout
     
    
 
@@ -99,9 +107,15 @@
 
 ## 3.2 Features Left to Implement
 
-    Star Rating system - I origionally wanted to add in a star rating system. I found some code online (See CSS file) but I wasnt well equipped enough to write the Python code to accomodate this so I have added this to the future learning points section.
+    Star Rating system - I origionally wanted to add in a star rating system. 
+    I found some code online (See CSS file) but I wasnt well equipped enough 
+    to write the Python code to accomodate this so I have added this to the 
+    future learning points section.
 
-    Improved 
+    Improved delete recipe functionality - Currently uses javascript to display 
+    a message but would like to add a proper warning/confirmation message.
+
+
 
 ## 3.3 Technologies Used
 <br>
@@ -166,8 +180,12 @@ Am I responsive - http://ami.responsivedesign.is/
 ## 6.1 Lessons
 
 
+    * Using Materializecss made creating a website a lot easier. Definitely need to practice creating sites using this and bootstrap going forward
+    * Gradually improved my understanding of python and websites but still needs future study
+
 ## 6.2 Future study points
 
+    * Python and websites in general
     * Passing python code/functions from the app file into the html template
     * DIV sizing is still an issue. Better than before but not able to be self dependant
     * Star Rating System - As see in the features left to implement section
