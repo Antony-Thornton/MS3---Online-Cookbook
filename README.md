@@ -4,6 +4,8 @@
 
 # The Veggie Guy - Cookbook
 
+
+
 # Contents
 
 ## [1. Project Status](#project-status "1. Project Status")
@@ -23,6 +25,7 @@
 ## [6. Lessons Learnt](#lessons-learnt "6. Lessons Learnt")
     * 6.1 Lessons
     * 6.2 Future Study Points
+## [Testing Information](#testing-information "Testing Information")
 
 #
 # Project Status
@@ -50,6 +53,8 @@
 <br>
 <br>
 <br>
+
+## [Go To Top](#contents "Go To Top")
 
 # User Story
 ## 2.1 The business case (Project Goals):
@@ -106,6 +111,8 @@
 <br>
 <br>
 
+## [Go To Top](#contents "Go To Top")
+
 # Features
 
 ## 3.1 Existing Features
@@ -145,28 +152,37 @@
 <br>
 <br>
 
+[a link] (https://github.com/user/repo/blob/branch/other_file.md)
 
-HTML 5 - https://html.com/html5/
+HTML 5 - The project uses HyperText Markup Language - https://html.com/html5/
 
-CSS3 - https://en.wikipedia.org/wiki/CSS
+CSS3 - The project uses Cascading Style Sheets - https://en.wikipedia.org/wiki/CSS
 
-JavaScript - https://www.javascript.com/
+JavaScript - The project uses JavaScript - https://www.javascript.com/
 
-Python - https://www.python.org/
+Python - The project uses Python - https://www.python.org/
 
 Materialize - https://materializecss.com/
 
 Balsamiq Wireframes - https://balsamiq.com/wireframes/
+
+Gitpod - The project uses Gitpod - https://www.gitpod.io/
+
+GitHub - GitHub was used to store the project's code after being pushed from Git - https://github.com/
+
+Chrome - The project uses Chrome to debug and test the source code using HTML5 - https://www.google.co.uk/chrome/
 
 JavaScript code beutifier - https://beautifier.io/ - Corrects Javascript/HTML/CSS code with correct spacing/lines etc.
 
 Am I responsive - http://ami.responsivedesign.is/
 
 
+
 <br>
 <br>
 <br>
 
+## [Go To Top](#contents "Go To Top")
 # Deployment
 
 ## 4.1 Local Deployment
@@ -177,7 +193,7 @@ Am I responsive - http://ami.responsivedesign.is/
 <br>
 <br>
 
-
+## [Go To Top](#contents "Go To Top")
 # Credits
 ## 5.1 Content
 
@@ -199,7 +215,7 @@ Am I responsive - http://ami.responsivedesign.is/
 <br>
 <br>
 
-
+## [Go To Top](#contents "Go To Top")
 # Lessons learnt
 ## 6.1 Lessons
 
@@ -214,6 +230,14 @@ Am I responsive - http://ami.responsivedesign.is/
     * DIV sizing is still an issue. Better than before but not able to be self dependant
     * Star Rating System - As see in the features left to implement section
     * Resizing cards and elements that have come from materialize css
+
+<br>
+<br>
+<br>
+
+## [Go To Top](#contents "Go To Top")
+# Testing Information
+Please visit https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/README_TESTING.md for more information.
 
 #
 
