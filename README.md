@@ -126,6 +126,10 @@
     Improved delete recipe functionality - Currently uses javascript to display 
     a message but would like to add a proper warning/confirmation message.
 
+    Add a star rating system to the community recipes - As well as tool ratings this
+    can be applied to community recipes and then pulled through to the manage recipe's 
+    page of the user.
+
     Unique categories on my recipes - I tried with CI help to get a list of unique 
     categories to display for each user but I couldnt get it working in time for submission. 
     See below two images for details. Instructions can also be seen in the 
