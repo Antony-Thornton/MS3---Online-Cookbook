@@ -149,10 +149,6 @@
 ![index web](static/assets/images/unique_categories_list_example.jpg)
 
 ## 3.3 Technologies Used
-<br>
-<br>
-
-[a link] (https://github.com/user/repo/blob/branch/other_file.md)
 
 HTML 5 - The project uses HyperText Markup Language - https://html.com/html5/
 
@@ -186,8 +182,21 @@ Am I responsive - http://ami.responsivedesign.is/
 ## [Go To Top](#contents "Go To Top")
 # Deployment
 
-## 4.1 Local Deployment
+    I used the terminal to deploy my project locally. To do this I had to:
 
+    1. Create a repository on GitHub.
+    2. Clone the repository on your chosen source code editor (GitPod in my case) using the clone link.
+    3. Open the terminal within GitPod
+    4. Enter "python3 manage.py runserver into the terminal.
+    5. Go to local host address on my web browser.
+    6. All locally saved changes will show up here.
+    
+    For the final deployment to Heroku, I had to:
+
+    1. Set debug = False in my settings.py file.
+    2. Commit and push all files to GitHub
+    3. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+    4. In the deploy tab, go to the manual deploy sections and click deploy branch.
 
 
 <br>
@@ -209,7 +218,7 @@ Am I responsive - http://ami.responsivedesign.is/
 ## 5.3 Acknowledgements
     * Thank you to my Mentor Marcel for the help and advice in the build up to submission
     * Thank you to Code instute for the course and the material
-    * Thank you to the Tutor Assistance team at Code Insititute for the help they provided in fixing bugs and issue with my code
+    * Thank you to the Tutor Assistance team at Code Insititute for the help they provided in fixing bugs and issue with my code. Noteably Sean and Ger.
 
 
 <br>
