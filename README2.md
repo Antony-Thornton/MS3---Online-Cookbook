@@ -129,6 +129,76 @@ Fonts used have been pulled through using materializecss.
 # 2. Features
 #### [Go To Top](#table-of-contents "Go To Top")
 
+
+
+## Navigation
+
+* The navigation bar has two layouts. One view for a desktop and the other for mobile.
+
+* The desktop view uses a traditional layout utilising materialisecss default navigation. The user should clearly find all navgational pages at the top right.
+
+* As with the desktop view the mobile uses existing css code but compreses the links into a colapsable element at the top right. The user should be able to open the element and see all the available links.
+
+## Home Page
+
+* The home page is the main landing page for the site. When the user visits the page they should be able to understand what the website is about and what it can offer them.
+* The page presents information as its primary feature.  
+
+## Cooking tools
+
+* The cooking tools page is the primary revenue generator for the website.
+* The owner wants to sell a brand of tools.
+* The tools page has a series of card elements that display information about a tool as well as its price and where to buy.
+
+## Community Recipes
+* The community recipes page will display all of the "approved for community" user approved recipes.
+* The user will be able to search for key words included in recipes.
+* The recipe's will display in a card that can be opened to display more information.
+* The user should be able to decide whether they want their username to display or not. If they opt out it will show as private but the recipe can still be seen.
+
+## Register
+
+* The register page is a key feature of the website. The user should be able to register an account on the website.
+* The account should always have a unique username for personal and security purposes.
+* Because the website has no features that utalise the users email address at time of writing there is no check for duplicate emails.
+* Without registering certain pages of the site will be blocked from accessing. See [SiteMap](#sitemap "Sitemap") for more information.
+* The user needs to add; an unique username, a password and an email address.
+
+## Login
+* Once an account has been registered the user should be able to log into their account and manage the recipes they have created or would like to create.
+
+## My Recipe's
+* This page will have a similar layout to the community page but when the card opens a lot more information about the recipe will be presented.
+
+## Profile
+* This page will have the most interactive features of the site.
+* The page will be made up of 3 list items; Create a recipe, edit/delete a recipe and see the users information
+* The 1st list item will open to a form where the user can submit a new recipe along with the desired information
+* The 2nd list item will display all of the recipes the user has created and display all of the information submitted.
+* Within the 2nd list item the user can edit a recipe opening up a form or delete the recipe completely.
+* The 3rd list item will show all the current session user and email address
+
+## Features left to implement
+* Star Rating system - I origionally wanted to add in a star rating system. 
+I found some code online (See CSS file) but I wasnt well equipped enough 
+to write the Python code to accomodate this so I have added this to the 
+future learning points section.
+
+* Improved delete recipe functionality - Currently uses javascript to display 
+a message but would like to add a proper warning/confirmation message.
+
+* Add a star rating system to the community recipes - As well as tool ratings this
+can be applied to community recipes and then pulled through to the manage recipe's 
+page of the user.
+
+* Unique categories on my recipes - I tried with CI help to get a list of unique 
+categories to display for each user but I couldnt get it working in time for submission. 
+See below two images for details. Instructions can also be seen in the 
+"recipes_html_unique_categoriesl.txt" file.
+
+https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_unique_categoriesl.txt.
+
+
 # 3. Technologies Used
 #### [Go To Top](#table-of-contents "Go To Top")
 
