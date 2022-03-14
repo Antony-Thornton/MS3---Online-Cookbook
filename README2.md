@@ -4,7 +4,9 @@ Welcome to my third project. This project is a simple online cookbook that allow
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and table booking.
 
-A live website can be found here.
+A live website can be found <a href="" target="_blank">here</a>.
+
+# UPDATE LINK ABOVE *******************************
 
 ![index web](static/assets/images/readme_lead_image.jpg)
 
