@@ -188,8 +188,7 @@
         <button class="button_edit btn-small green accent-4" >Edit Recipe</button>  
         <button class="button_delete btn-small red accent-4" >Delete Recipe</button>    
         <div class="wrapper_delete" style="display: none;">
-          <h4>!!! WARNING !!!</h4>
-          <h6>This next step cannot be undone. If you click delete this recipe will be deleted forever.</h6>
+          <h5>WARNING</h5><h6>This next step cannot be undone. If you click delete this recipe will be deleted forever.</h6>
           <a href="{{ url_for('delete_recipe', recipe_id=information._id) }}" class="btn-small red accent-4">Delete</a>
        </div>  
         <div class="wrapper_edit" style="display: none;">
