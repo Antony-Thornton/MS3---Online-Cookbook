@@ -131,8 +131,6 @@ Fonts used have been pulled through using materializecss.
 # 2. Features
 #### [Go To Top](#table-of-contents "Go To Top")
 
-
-
 ## Navigation
 
 * The navigation bar has two layouts. One view for a desktop and the other for mobile.
@@ -232,10 +230,22 @@ https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_
 # 4. Testing
 #### [Go To Top](#table-of-contents "Go To Top")
 
-PEP8 Online
+* Testing has been based on a minimum size of an iPhone SE and a maximum width of 1440p as per my mentors advice. Custom CSS has been created to accomodate multiple screen sizes
 
-https://validator.w3.org/
-http://pep8online.com/
+* Python Code in the app.py file has been validated by using <a href="http://pep8online.com/" target="_blank">PEP8 Online</a>
+
+* HTML code has been validated using <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>
+
+* CSS code has been validated using <a href="https://jigsaw.w3.org/css-validator//" target="_blank">W3C CSS Validation Service</a>
+
+### iPhone SE
+
+![index web](static/assets/images/iphoneSE.jpg)
+
+### 1440p
+![index web](static/assets/images/1440p.jpg)
+
+
 
 
 
