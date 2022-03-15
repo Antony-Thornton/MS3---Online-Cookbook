@@ -478,7 +478,7 @@ label.star:before {
 }
 
 .links:hover {
-  color: green#80b444; 
+  color: #80b444; 
   text-decoration: underline;
 }
 
