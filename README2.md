@@ -246,8 +246,12 @@ https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_
 ![index web](static/assets/images/1440p.jpg)
 
 
+## PEP8 Online results
 
 
+## HTML Validator results
+
+## CSS Validator results
 
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
