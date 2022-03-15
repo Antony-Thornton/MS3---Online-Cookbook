@@ -26,18 +26,18 @@
         {% if information|length > 0 %}    
           {% if session.user|lower == information.created_by|lower %}
  
-            <div class="card"style="max-width: 700px; margin-left: auto;margin-right: auto;">
+            <div class="card" style="max-width: 700px; margin-left: auto;margin-right: auto;">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ information.picpath }}">
+                <img class="activator" src="{{ information.picpath }}" alt="{{ information.recipe_name }}">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">
-                  <h1>{{ information.recipe_name }}</h1>
+                  {{ information.recipe_name }}<br>
                   <a class="btn-floating btn-large waves-effect waves-light light-green"><i class="material-icons" style="font-size:small;">Open</i></a></span>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">
-                  <h4>{{ information.recipe_name }}</h4>
+                  {{ information.recipe_name }}<br>
                   <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" style="font-size:small;">CLOSE</i></a></span>
                 <table class="table">
                   <tbody>

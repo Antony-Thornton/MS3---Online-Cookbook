@@ -52,7 +52,7 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="feeds"class="materialize-textarea" style="width: 10%;" required></textarea>
+                  <textarea id="textarea1" name="feeds" class="materialize-textarea" style="width: 10%;" required></textarea>
                   <label for="textarea1">Feeds</label>
                 </div>
               </div>
@@ -60,12 +60,12 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="cooking" class="materialize-textarea" required></textarea>
-                  <label for="textarea1">Cooking Instructions</label>
+                  <textarea id="textarea2" name="cooking" class="materialize-textarea" required></textarea>
+                  <label for="textarea2">Cooking Instructions</label>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <div class="tooltip" required>Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
+                    <div class="tooltip">Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
                     </div>
                   </div>
                 </div>
@@ -74,46 +74,46 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required></textarea>
-                  <label for="textarea1">Ingredients</label>
+                  <textarea id="textarea3" name="ingredients" class="materialize-textarea" required></textarea>
+                  <label for="textarea3">Ingredients</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <div class="tooltip" required>Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
+                <div class="tooltip">Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required></textarea>
-                  <label for="textarea1">Picture URL</label>
+                  <textarea id="textarea4" name="picpath" class="materialize-textarea" required></textarea>
+                  <label for="textarea4">Picture URL</label>
                 </div>
               </div>
               <div class="input-field col s12">
-                <div class="tooltip" required>Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
+                <div class="tooltip">Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="recipe_url" class="materialize-textarea" required></textarea>
-                  <label for="textarea1">Recipe URL</label>
+                  <textarea id="textarea5" name="recipe_url" class="materialize-textarea" required></textarea>
+                  <label for="textarea5">Recipe URL</label>
                 </div>
               </div>
               <div class="input-field col s12">
-                <div class="tooltip" required>Recipe URL Information <span class="tooltiptext">If the recipe can be found on an external site please enter the URL here.</span>
+                <div class="tooltip">Recipe URL Information <span class="tooltiptext">If the recipe can be found on an external site please enter the URL here.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="category" class="materialize-textarea" required></textarea>
-                  <label for="textarea1">Category</label>
+                  <textarea id="textarea6" name="category" class="materialize-textarea" required></textarea>
+                  <label for="textarea6">Category</label>
                 </div>
               </div>
               <div class="input-field col s12">
@@ -139,8 +139,8 @@
         <div class="buffer"></div>
         {% for information in info %} 
         {% if session.user|lower == information.created_by|lower %}
+        <h3>{{ information.recipe_name }}</h3>
         <table class="table">
-          <h3>{{ information.recipe_name }}</h3>
           <tbody>
             <tr>
               <th scope="row">Feeds:</th>
@@ -194,11 +194,11 @@
         <div class="wrapper_edit" style="display: none;">
           <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=information._id) }}">
             <div class="row">
-              <h5>Edit recipe for "<h3>{{information.recipe_name}}"</h3></h5>
+              <h5>Edit recipe for "{{information.recipe_name}}"</h5>
             </div>
             <div class="input-field col s6" style="display: none;">
-              <input placeholder="Recipe Name" id="recipe_name" name="recipe_name" value="{{ information.recipe_name }}" type="text" class="validate" required>
-              <label for="recipe_name">{{information.recipe_name}}</label>
+              <input placeholder="Recipe Name" id="recipe_name2" name="recipe_name" value="{{ information.recipe_name }}" type="text" class="validate" required>
+              <label for="recipe_name2">{{information.recipe_name}}</label>
             </div>
             <p>
               <label>
@@ -227,20 +227,20 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="feeds"class="materialize-textarea" style="width: 10%;" required>{{information.feeds}}</textarea>
-                  <label for="textarea1">Feeds</label>
+                  <textarea id="textarea11" name="feeds" class="materialize-textarea" style="width: 10%;" required>{{information.feeds}}</textarea>
+                  <label for="textarea11">Feeds</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="cooking" class="materialize-textarea" required>{{information.cooking}}</textarea>
-                  <label for="textarea1">Cooking Instructions</label>
+                  <textarea id="textarea12" name="cooking" class="materialize-textarea" required>{{information.cooking}}</textarea>
+                  <label for="textarea12">Cooking Instructions</label>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <div class="tooltip" required>Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
+                    <div class="tooltip">Cooking Instructions <span class="tooltiptext">Please enter cooking instructions as you see fit. The text area will automatically expand.</span>
                     </div>
                   </div>
                 </div>
@@ -249,46 +249,46 @@
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="ingredients" class="materialize-textarea" required>{{information.ingredients}}</textarea>
-                  <label for="textarea1">Ingredients</label>
+                  <textarea id="textarea13" name="ingredients" class="materialize-textarea" required>{{information.ingredients}}</textarea>
+                  <label for="textarea13">Ingredients</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <div class="tooltip" required>Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
+                <div class="tooltip">Ingredient Instructions <span class="tooltiptext">Please enter required ingredients as you see fit. The text area will automatically expand.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="picpath" class="materialize-textarea" required>{{information.picpath}}</textarea>
-                  <label for="textarea1">Picture URL</label>
+                  <textarea id="textarea14" name="picpath" class="materialize-textarea" required>{{information.picpath}}</textarea>
+                  <label for="textarea14">Picture URL</label>
                 </div>
               </div>
               <div class="input-field col s12">
-                <div class="tooltip" required>Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
+                <div class="tooltip">Picture Instructions <span class="tooltiptext">If you would like to show a picture associated with this recipe please enter the URL here.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="recipe_url" class="materialize-textarea" required>{{information.recipe_url}}</textarea>
-                  <label for="textarea1">Recipe URL</label>
+                  <textarea id="textarea15" name="recipe_url" class="materialize-textarea" required>{{information.recipe_url}}</textarea>
+                  <label for="textarea15">Recipe URL</label>
                 </div>
               </div>
               <div class="input-field col s12">
-                <div class="tooltip" required>Recipe URL Information <span class="tooltiptext">If the recipe can be found on an external site please enter the URL here.</span>
+                <div class="tooltip">Recipe URL Information <span class="tooltiptext">If the recipe can be found on an external site please enter the URL here.</span>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="category" class="materialize-textarea" required>{{information.category}}</textarea>
-                  <label for="textarea1">Category</label>
+                  <textarea id="textarea16" name="category" class="materialize-textarea" required>{{information.category}}</textarea>
+                  <label for="textarea16">Category</label>
                 </div>
               </div>
               <div class="input-field col s12">
@@ -296,7 +296,7 @@
                 </div>
               </div>
             </div>
-            <input class="btn-small green accent-4 edit-btn" type="submit" value="Submit"></input>
+            <input class="btn-small green accent-4 edit-btn" type="submit" value="Submit">
           </form>
         </div>
 
@@ -334,5 +334,5 @@
     </li>
   </ul>
 </div> 
-
+</section>
     {% endblock %}
