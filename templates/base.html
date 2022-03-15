@@ -1,84 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-        integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    {% block styles %}
-    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"> 
+    {% block styles %} 
+    {% endblock %} 
     <title>The Veggie Guy</title>
-</head>
-<body>
-
-	<header>
-        <!-- top navbar -->
-		<nav class="nav-extended text-shadow light-green darken-1">
-			<div class="nav-wrapper">
-				<a href="{{ url_for('get_tasks') }}" class="brand-logo">The Veggie Guy</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down">
-            <li ><a class= "nav_format" href="{{ url_for('get_tasks') }}">Home</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('tools') }}">Cooking Tools</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('community') }}">Community Recipes</a></li>
-          {% if session.user %}
-          <li><a  class= "nav_format" href="{{ url_for('recipes') }}">My Recipe's</a></li>
-          <li><a  class= "nav_format" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('logout') }}">Log Out</a></li>
-          {% else %}
-            <li><a  class= "nav_format" href="{{ url_for('login') }}">Log In</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('register') }}">Register</a></li>
-          {% endif %}
-				</ul>
-			</div>
-		</nav>
-
-        <!-- mobile sidenav -->
-		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align light-green-text text-darken 4">Cookbook</h4></li>
-            <li><a  class= "nav_format" href="{{ url_for('get_tasks') }}">Home</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('tools') }}">Cooking Tools</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('community') }}">Community Recipes</a></li>
-          {% if session.user %}
-          <li><a  class= "nav_format" href="{{ url_for('recipes') }}">My Recipe's</a></li> 
-          <li><a  class= "nav_format" href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('logout') }}">Log Out</a></li>
-          {% else %}
-            <li><a  class= "nav_format" href="{{ url_for('login') }}">Log In</a></li>
-            <li><a  class= "nav_format" href="{{ url_for('register') }}">Register</a></li>
-          {% endif %}
-		</ul>
-	</header>
-
-    <section>
-        <!-- flash messages -->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes" style="max-width: 500px; padding: 10px;">
-                        <h4 style="padding: 10px;"class="light-green lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
+  </head>
+  <body>
+    <header>
+      <!-- top navbar -->
+      <nav class="nav-extended text-shadow light-green darken-1">
+        <div class="nav-wrapper">
+              <a href="{{ url_for('get_tasks') }}" class="brand-logo">The Veggie Guy</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+            <i class="fas fa-bars"></i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a class="nav_format" href="{{ url_for('get_tasks') }}">Home</a>
+            </li>
+            <li>
+              <a class="nav_format" href="{{ url_for('tools') }}">Cooking Tools</a>
+            </li>
+            <li>
+              <a class="nav_format" href="{{ url_for('community') }}">Community Recipes</a>
+            </li> 
+            {% if session.user %} 
+              <li>
+                <a class="nav_format" href="{{ url_for('recipes') }}">My Recipe's</a>
+              </li>
+              <li>
+                <a class="nav_format" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+              </li>
+              <li>
+                <a class="nav_format" href="{{ url_for('logout') }}">Log Out</a>
+              </li> 
+            {% else %} 
+              <li>
+                <a class="nav_format" href="{{ url_for('login') }}">Log In</a>
+              </li>
+              <li>
+                <a class="nav_format" href="{{ url_for('register') }}">Register</a>
+              </li> 
             {% endif %}
-        {% endwith %}
+          </ul>
+        </div>
+      </nav>
+      <!-- mobile sidenav -->
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <h4 class="center-align light-green-text text-darken 4">Cookbook</h4>
+        </li>
+        <li>
+          <a class="nav_format" href="{{ url_for('get_tasks') }}">Home</a>
+        </li>
+        <li>
+          <a class="nav_format" href="{{ url_for('tools') }}">Cooking Tools</a>
+        </li>
+        <li>
+          <a class="nav_format" href="{{ url_for('community') }}">Community Recipes</a>
+        </li> 
+        {% if session.user %} 
+          <li>
+            <a class="nav_format" href="{{ url_for('recipes') }}">My Recipe's</a>
+          </li>
+          <li>
+            <a class="nav_format" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+          </li>
+          <li>
+            <a class="nav_format" href="{{ url_for('logout') }}">Log Out</a>
+          </li> 
+        {% else %} 
+          <li>
+            <a class="nav_format" href="{{ url_for('login') }}">Log In</a>
+          </li>
+          <li>
+            <a class="nav_format" href="{{ url_for('register') }}">Register</a>
+          </li> 
+        {% endif %}
+      </ul>
+    </header>
+    <section>
+      <!-- flash messages --> 
+      {% with messages = get_flashed_messages() %} 
+      {% if messages %} 
+      {% for message in messages %} 
+      <div class="row flashes" style="max-width: 500px; padding: 10px;">
+        <h4 style="padding: 10px;" class="light-green lighten-4 center-align">{{ message }}</h4>
+      </div> 
+      {% endfor %} 
+      {% endif %} 
+      {% endwith %}
     </section>
-
-    <main class="container_custom">
-        {% block content %}
-        {% endblock %}
-    </main>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <main class="container_custom"> {% block content %} {% endblock %} </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
-</body>
-<footer class="page-footer text-shadow light-green darken-1">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> {% block scripts %} {% endblock %}
+
+  <footer class="page-footer text-shadow light-green darken-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -93,19 +117,28 @@
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.pexels.com/" target="_blank">Pexels.com</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://github.com/Antony-Thornton" target="_blank">More From Me</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://nicolagraimes.co.uk/project/part-time-vegetarian/" target="_blank">Part-Time Vegetarian - Nicola Graimes</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://codeinstitute.net/" target="_blank">Code Institute</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.lakeland.co.uk/in-the-kitchen/kitchen-utensils" target="_blank">Lakeland</a></li>
-            
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.pexels.com/" target="_blank">Pexels.com</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/Antony-Thornton" target="_blank">More From Me</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://nicolagraimes.co.uk/project/part-time-vegetarian/" target="_blank">Part-Time Vegetarian - Nicola Graimes</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://codeinstitute.net/" target="_blank">Code Institute</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.lakeland.co.uk/in-the-kitchen/kitchen-utensils" target="_blank">Lakeland</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-      </div>
+      <div class="container"></div>
     </div>
   </footer>
+</body>
 </html>
