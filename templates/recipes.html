@@ -2,7 +2,8 @@
 {% block content %}
 <section class="container" style="text-align: center;">
   <h1 class="col s12 light-green-text text-darken-4 move_to_top">All of your recipes in one place</h1>
-  <h3>Browse and edit your recipes here</h3>
+  <h3>Browse and edit your recipes here.</h3>
+  <h4>For more information on a recipe, please click the open button. It will show you all the information you have stored. To edit a recipe please go to your <a  class= "nav_format links" href="{{ url_for('profile', username=session['user']) }}">profile</a>.</h4>
   <div class="">
     <div class="row card-panel grey lighten-5">
       <form action="{{ url_for('search_recipes') }}" method="post" class="col s12">
