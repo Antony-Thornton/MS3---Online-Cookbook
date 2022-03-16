@@ -302,6 +302,8 @@ For the final deployment to Heroku, I had to:
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
 
+* <a href="https://github.com/Dogfalo/materialize/issues/1427" target="_blank">Scaling bug</a> -
+
 * Various issues with naming
 Due to a course break and a lack of initial understanding of the course material a lot of the python naming was  incorrect and or incosistent that lead to bugs that needed to be fixed with CI's help. This caused most of the  problems I had
 * Elements expanding outside of their container 
