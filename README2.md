@@ -246,7 +246,18 @@ https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_
 ![index web](static/assets/images/1440p.jpg)
 
 
-# Cod validation
+# Code validation
+
+## Responsive Tools
+I used <a href="http://ami.responsivedesign.is/" target="_blank">Am I Responsive</a> to make sure that all my pages are responsive to all devices.
+
+
+## Javascript
+I used <a href="https://jshint.com/" target="_blank">JS Hint</a> to check for any errors within my JavaScript script tags. 
+
+JS Hint showed no warnings.
+![index web](static/assets/images/testing/javascript_check.jpg)
+
 ## PEP8 Online results
 ![index web](static/assets/images/testing/pep8checker.jpg)
 
@@ -291,8 +302,6 @@ https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_
 
 ![index web](static/assets/images/testing/css_validator_check.jpg)
 
-
-## Scaling
 
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
