@@ -246,12 +246,53 @@ https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_
 ![index web](static/assets/images/1440p.jpg)
 
 
+# Cod validation
 ## PEP8 Online results
-
+![index web](static/assets/images/testing/pep8checker.jpg)
 
 ## HTML Validator results
 
+
+| Page | Date Checked | Result | Comment
+| :--- | :--- | :--- | :-- 
+| Home.html | 16/03/2022 | Pass |
+| Tools.html | 16/03/2022 | Pass |
+| Community.html | 16/03/2022 | Pass 
+| Login.html | 16/03/2022 | Pass 
+| Register.html | 16/03/2022 | Pass 
+| Logout.html | n/a | n/a
+| Profile.html | 16/03/2022 | Pass | Python related error's. Mentor advised to ignore
+| Recipes.html | 16/03/2022 | Pass | Python related error's. Mentor advised to ignore
+
+![index web](static/assets/images/testing/home_html_check.jpg)
+
+![index web](static/assets/images/testing/tools_html_check.jpg)
+
+![index web](static/assets/images/testing/community_html_check.jpg)
+
+![index web](static/assets/images/testing/login_html_check.jpg)
+
+![index web](static/assets/images/testing/register_html_check.jpg)
+
+## Profile
+
+![index web](static/assets/images/testing/profile_html_check.jpg)
+
+## Recipe
+
+![index web](static/assets/images/testing/recipe_html_check.jpg)
+
+
+
 ## CSS Validator results
+| Page | Date Checked | Result | Comment
+| :--- | :--- | :--- | :-- 
+| style.css | 16/03/2022 | Pass | n/a
+
+![index web](static/assets/images/testing/css_validator_check.jpg)
+
+
+## Scaling
 
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
