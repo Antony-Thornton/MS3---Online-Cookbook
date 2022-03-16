@@ -488,3 +488,8 @@ label.star:before {
   display:none
 
 }  
+
+
+.hiddendiv { 
+  width: 100% !important
+}
