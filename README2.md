@@ -426,17 +426,11 @@ For the final deployment to Heroku, I had to:
 
 
 ### Breakdown
-* <a href="https://github.com/Dogfalo/materialize/issues/1427" target="_blank">Scaling bug</a> -
-    * Code Institute Tutor Feedback - We can assume it's related to Materialize and resizing textareas, but it's only an issue in Dev Tools.
+* <a href="https://github.com/Dogfalo/materialize/issues/1427" target="_blank">Scaling bug</a> - There is a bug in the materialize css code that causes scaling issue on the profile page. I worked with tutor support and they provided a fix that forced a hidden element brought over by materialize to be 100%. Previously under random circumstances the width of a hidden div would be fixed at 487px and not scale correctly.
+    * Code Institute Tutor Bug Feedback - "We can assume it's related to Materialize and resizing textareas, but it's only an issue in Dev Tools.
 Unless there are other scripts you've included?
-In the end I don't think it's something to be worried about if it's not impacting your site during regular use. Definitely something for the README if you can't pinpoint a fix
-
-https://stackoverflow.com/questions/30609388/why-my-meteor-app-create-hiddendiv-common-div-tags
-
-# ****************** ADD picture links HERE *******************
-![index web](static/assets/images/)
-![index web](static/assets/images)
-
+In the end I don't think it's something to be worried about if it's not impacting your site during regular use. Definitely something for the README if you can't pinpoint a fix" 
+    * https://stackoverflow.com/questions/30609388/why-my-meteor-app-create-hiddendiv-common-div-tags
 * Various issues with naming
 Due to a course break and a lack of initial understanding of the course material a lot of the python naming was  incorrect and or incosistent that lead to bugs that needed to be fixed with CI's help. This caused most of the  problems I had
 * Elements expanding outside of their container 
