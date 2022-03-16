@@ -317,20 +317,20 @@
       <div class="collapsible-body">
         <h5>View your account details</h5>
           <div>
-                  Username:
+            <div class="row">
+                <strong>Username:</strong>
                 {{username}}
-           
-                  Registered Email:
-
+            </div>
+            <div class="row">
+              <strong>Registered Email:</strong>
               {% for user in user %}
               {% if session.user|lower == user.username|lower %}
-         
-                  {{ user.email }}
-  
+                {{ user.email }}
               {% endif %}  
               {% endfor %}  
             </div>
-      </div>
+          </div>
+       </div>  
     </li>
   </ul>
 </div> 
