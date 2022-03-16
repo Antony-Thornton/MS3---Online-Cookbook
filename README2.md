@@ -303,6 +303,78 @@ JS Hint showed no warnings.
 ![index web](static/assets/images/testing/css_validator_check.jpg)
 
 
+
+## CSS Manual Testing
+
+I have tested my site on Safari and google chrome on multiple devices.
+
+These include:
+
+* iPhone X
+* iPhone XS Max
+* iPad Pro
+* MacBook Pro
+* Please find below my testing process for all pages via mobile and web:
+
+## Navigation Bar
+All Pages:
+
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+| Home.html | 
+| Tools.html | 
+| Community.html | 
+| Login.html | 
+| Register.html | 
+| Logout.html | 
+| Profile.html | 
+| Recipes.html |  
+
+## Footer Links
+All Pages:
+
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+| Home.html | 
+| Tools.html | 
+| Community.html | 
+| Login.html | 
+| Register.html | 
+| Logout.html | 
+| Profile.html | 
+| Recipes.html |  
+
+
+## Home Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+
+## Tools Page
+
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+## Community Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+## Register Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+## Login Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+## My Recipe's Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
+## Profile Page
+| Page | Outcome | Result 
+| :--- | :--- | :--- 
+
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
 
