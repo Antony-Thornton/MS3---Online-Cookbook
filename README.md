@@ -34,8 +34,6 @@ A live website can be found <a href="https://cook-book-antony.herokuapp.com/home
 
 # 1.UX
 #### [Go To Top](#table-of-contents "Go To Top")
-# **************Update this
-
 The project will give the user an easy way to store, update, delete and edit stored recipe's. Either personal or external.
 
 ## 1.1 Strategy
@@ -122,7 +120,9 @@ Colors used can be found <a href="https://materializecss.com/color.html" target=
 
 Fonts used have been pulled through using materializecss.
 
-# ************ add more informatin on colour choices
+A green color pallette has been applied to match the veggie guy theme. 
+
+Blue has been used on the profile page to make the list items stand out to the user. 
 
 
 # 2. Features
