@@ -191,9 +191,10 @@ page of the user.
 * Unique categories on my recipes - I tried with CI help to get a list of unique 
 categories to display for each user but I couldnt get it working in time for submission. 
 See below two images for details. Instructions can also be seen in the 
-"recipes_html_unique_categoriesl.txt" file.
+<a href="https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_unique_categoriesl.txt" target="_blank">"recipes_html_unique_categoriesl.txt"</a> file.
 
-https://github.com/Antony-Thornton/MS3---Online-Cookbook/blob/main/recipes_html_unique_categoriesl.txt.
+
+
 
 
 # 3. Technologies Used
