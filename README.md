@@ -318,59 +318,98 @@ All Pages:
 
 | Page | Outcome | Result 
 | :--- | :--- | :--- 
-| Home.html | 
-| Tools.html | 
-| Community.html | 
-| Login.html | 
-| Register.html | 
-| Logout.html | 
-| Profile.html | 
-| Recipes.html |  
+| Home.html | Link should send user to the Home Page. |
+| Tools.html | Link should send user to the Tools Page. |
+| Community.html | Link should send user to the Community Recipes Page. |
+| Login.html | Link should send user to the Login Page. The login/register nav elements should not display. Profile, My recipe's and Logout should then be visible to the user. |
+| Register.html | Link should send user to the Register Page. |
+| Logout.html | Link should log the user out, display the Login and Register nav elements and hide profile, My recipe's and Logout | 
+| Profile.html | Link should send user to the Profile Page.
+| Recipes.html |  Link should send user to the Recipe's Page. | 
 
 ## Footer Links
 All Pages:
 
 | Page | Outcome | Result 
 | :--- | :--- | :--- 
-| Home.html | 
-| Tools.html | 
-| Community.html | 
-| Login.html | 
-| Register.html | 
-| Logout.html | 
-| Profile.html | 
-| Recipes.html |  
+| Home.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Tools.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Community.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Login.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Register.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Profile.html | All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
+| Recipes.html |  All of the links should open to the correct website. Pexels, my github profile, BBC good foods and the lakeland website | 
 
 
 ## Home Page
-| Page | Outcome | Result 
+| Test | Outcome | Result 
 | :--- | :--- | :--- 
+HTML elements | All elements should display as intended. | 
+Page Scaling | The page should display clearly and as intended when page width is reduced. |
 
 
 ## Tools Page
 
-| Page | Outcome | Result 
+| Test  | Outcome | Result 
 | :--- | :--- | :--- 
+HTML elements | All elements should display as intended. | 
+Page Scaling | The page should display clearly and as intended when page width is reduced. |
+Tool containers | Each of the tool descriptions and links should be correct. |
+
 
 ## Community Page
-| Page | Outcome | Result 
+| Test | Outcome | Result 
 | :--- | :--- | :--- 
+HTML elements | All elements should display as intended. | 
+Page Scaling | The page should display clearly and as intended when page width is reduced. |
+Search Button | The search bar should display no recipes with a no results found message when a match is not found. |
+Search Button | The search bar should display some recipes based on key words in any of the recipes. i.e. "Egg". |
+Reset Button | The reset button should reload the page clearing any searches.|
+Open Button | The open button should open a materialize card where recipe information will be displayed.|
+Close Button | The close button within this card should then return the card to its previous state. |
+
 
 ## Register Page
-| Page | Outcome | Result 
+| Test | Outcome | Result 
 | :--- | :--- | :--- 
+Username Text Input | The username should be able to put in a user name of their choice.|
+Password Text Input | The username should be able to put in a password of their choice. When validated the password should not be accepted unless its between 5 and 15 characters in length and has a capital letter. |
+Register Button | The register button should submit a check to mongo to see if the user name exists. If it does a message saying username already exists. |
+Register Button Required fields | If any of the text inputs is blank the form should not submit. |
+Register Button | If everything passes the above checks the page should login successfully and display the associated navigation elements and open the profile page with no recipes in the manage recipes list item. |
+
 
 ## Login Page
 | Page | Outcome | Result 
 | :--- | :--- | :--- 
+Username Text Input | The username should be able to put in the username they created|
+Password Text Input | The username should be able to put in the password for their account. | 
+Login Button Required fields | If any of the text inputs is blank the form should not submit. |
+Login Button | If everything passes the above checks the page should login successfully and display the associated navigation elements and open the profile page with any stored user recipes in the manage recipes list item. |
 
 ## My Recipe's Page
 | Page | Outcome | Result 
 | :--- | :--- | :--- 
+HTML elements | All elements should display as intended. | 
+Page Scaling | The page should display clearly and as intended when page width is reduced. |
+Search Button | The search bar should display no recipes with a no results found message when a match is not found. |
+Search Button | The search bar should display some recipes based on key words in any of the recipes. i.e. "Egg". |
+Reset Button | The reset button should reload the page clearing any searches.|
+Open Button | The open button should open a materialize card where recipe information will be displayed.|
+Close Button | The close button within this card should then return the card to its previous state. |
 
 ## Profile Page
 | Page | Outcome | Result 
 | :--- | :--- | :--- 
+HTML elements | All elements should display as intended. | 
+Page Scaling | The page should display clearly and as intended when page width is reduced. |
+List Elements | Each list element should open and display its contents. |
+List element 1 | The first element should open and show a submit recipe form. |
+Submit form | When used the submit form should submit a user recipe to the mongoDB site. This should then be displayed when the page is refreshed. |
+List element 2 | The second element should open and show all of the users stored recipes. |
+Edit recipe form | When used the edit form button is pressed a new form should be displayed. The users changes should then be submitted to the mongoDB site. The changes should then be displayed when the page is refreshed. |
+Delete recipe button | When the delete recipe button is clicked javascript should show a warning with a second delete button. When clicked the recipe should be deleted when the page is refreshed.|
+List element 3 | The third element should open and display the users email and username. |
 
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
