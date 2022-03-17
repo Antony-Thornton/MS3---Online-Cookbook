@@ -302,17 +302,8 @@ JS Hint showed no warnings.
 
 
 
-## CSS Manual Testing
+## Manual Testing
 
-I have tested my site on Safari and google chrome on multiple devices.
-
-These include:
-
-* iPhone X
-* iPhone XS Max
-* iPad Pro
-* MacBook Pro
-* Please find below my testing process for all pages via mobile and web:
 
 ## Navigation Bar
 All Pages:
