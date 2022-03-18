@@ -10,7 +10,7 @@ A live website can be found <a href="https://cook-book-antony.herokuapp.com/home
 
 # Table of Contents
 
-* 1. UX
+1. UX
     * 1.1. Strategy
         * Project Goals
             * User Goals:
@@ -20,14 +20,14 @@ A live website can be found <a href="https://cook-book-antony.herokuapp.com/home
     * 1.2. Structure
     * 1.3. Skeleton
     * 1.4. Surface
-* 2. Features
-* 3. Technologies Used
-* 4. Testing
-* 5. Development Cycle
-* 6. Deployment
-* 7. End Product
-* 8. Known Bugs
-* 9. Credits
+2. Features
+3. Technologies Used
+4. Testing
+5. Development Cycle
+6. Deployment
+7. End Product
+8. Known Bugs
+9. Credits
 
 
 
