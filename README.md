@@ -10,39 +10,32 @@ A live website can be found <a href="https://cook-book-antony.herokuapp.com/home
 
 # Table of Contents
 
-## [1.UX](1)
-* 1.1. Strategy
-    * Project Goals
-        * User Goals:
-        * User Expectations:
-        * Trends of Modern Websites
-        * Strategy Table
-* 1.2. Structure
-* 1.3. Skeleton
-* 1.4. Surface
-## [2. Features](2)
+-   [1. UX](#ux)
+    -   [1.1. Strategy](#strategy)
+        -   [Project Goals](#project-goals)
+            -   [User Goals:](#user-goals)
+            -   [User Expectations:](#user-expectations)
+            -   [Trends of Modern Websites](#trends-of-modern-websites)
+            -   [Strategy Table](#strategy-table)
+    -   [1.2. Structure](#structure)
+    -   [1.3. Skeleton](#skeleton)
+    -   [1.4. Surface](#surface)
+-   [2. Features](#features)
+-   [3. Technologies Used](#technologies-used)
+-   [4. Testing](#testing)
+-   [5. Development Cycle](#development-cycle)
+-   [6. Deployment](#deployment)
+-   [7. End Product](#end-product)
+-   [8. Known Bugs](#known-bugs)
+-   [9. Credits](#credits)
 
-## [3. Technologies Used](3)
-
-## [4. Testing](4)
-
-## [5. Development Cycle](5)
-
-## [6. Deployment](6)
-
-## [7. End Product](#7)
-
-## [8. Known Bugs](#8)
-
-## [9. Credits](#9)
-
-
-
-<div id="UX"></div>
+<a name="ux"></a>
 
 # 1.UX
 #### [Go To Top](#table-of-contents "Go To Top")
 The project will give the user an easy way to store, update, delete and edit stored recipe's. Either personal or external.
+
+<a name="strategy"></a>
 
 ## 1.1 Strategy
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -82,6 +75,7 @@ The system should have a simple user interface, with the navigation to each sect
 * The user interface is easy to navigate.
 * The website is responsive on all devices.
 
+<a name="structure"></a>
 
 ## 1.2 Structure
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -91,6 +85,8 @@ It is really important to include responsive design in this project as many user
 * Responsive on all device sizes
 * Easy navigation through labelled buttons
 * All elements will be consistent including font size, font family, colour scheme.
+
+<a name="skeleton"></a>
 
 ## 1.3 Skeleton
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -120,6 +116,8 @@ It is really important to include responsive design in this project as many user
 ### Profile Pages - List Item 3
 ![index web](static/assets/images/Wireframes/profile_page_user_info.jpg)
 
+<a name="surface"></a>
+
 ## 1.4 Surface
 #### [Go To Top](#table-of-contents "Go To Top")
 
@@ -133,7 +131,7 @@ A green color pallette has been applied to match the veggie guy theme.
 Blue has been used on the profile page to make the list items stand out to the user. 
 
 
-<div id="2"></div>
+<a name="features"></a>
 
 # 2. Features
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -205,7 +203,7 @@ See below two images for details. Instructions can also be seen in the
 
 
 
-<div id="3"></div>
+<a name="technologies-used"></a>
 
 # 3. Technologies Used
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -234,7 +232,7 @@ See below two images for details. Instructions can also be seen in the
 * <a href="https://beautifier.io/" target="_blank">Code beutifier</a>
     * Corrects Javascript/HTML/CSS code with correct spacing/lines etc.
 
-<div id="4"></div>
+<a name="testing"></a>
 
 # 4. Testing
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -414,7 +412,7 @@ Edit recipe form | When used the edit form button is pressed a new form should b
 Delete recipe button | When the delete recipe button is clicked javascript should show a warning with a second delete button. When clicked the recipe should be deleted when the page is refreshed.|
 List element 3 | The third element should open and display the users email and username. |
 
-<div id="5"></div>
+<a name="development-cycle"></a>
 
 # 5. Developement Cycle
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -440,7 +438,7 @@ List element 3 | The third element should open and display the users email and u
     * Add Heroku database as the back end
     * Migrate changes to new database
 
-<div id="6"></div>
+<a name="deployment"></a>
 
 # 6. Deployment
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -460,7 +458,7 @@ For the final deployment to Heroku, I had to:
   2. Commit and push all files to GitHub
   3. In the deploy tab, go to the manual deploy sections and click deploy branch.
 
-<div id="7"></div>
+<a name="end-product"></a>
 
 # 7. End Product
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -474,7 +472,7 @@ For the final deployment to Heroku, I had to:
 ![index web](static/assets/images/finished_product/fp_login.jpg)
 
 
-<div id="8"></div>
+<a name="known-bugs"></a>
 
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
@@ -508,7 +506,7 @@ Due to a course break and a lack of initial understanding of the course material
 ![index web](static/assets/images/testing/desktop_recipe_screenshot.jpg)
 
 
-<div id="9"></div>
+<a name="credits"></a>
 
 # 9. Credits
 
