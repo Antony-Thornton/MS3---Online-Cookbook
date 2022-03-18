@@ -1,34 +1,36 @@
-{% extends "base.html" %} {% block content %} 
-<section class="container" style="text-align: center;">
+{% extends "base.html" %} {% block content %} <section class="container" style="text-align: center;">
   <h1 class="col s12 light-green-text text-darken-4 move_to_top">Browse our selection of cooking tools</h1>
   <h3>Browse our tools to help you become a true master chef!</h3>
   <div class="col s6"> 
-    {% for tooldata in tooldb %} <div class="col s6 ">
-      <div class="card" style="max-width: 700px; margin-left: auto;margin-right: auto;">
-        <div class="card-image">
-          <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
-            <img src="{{ tooldata.picpath }}" alt="">
-          </a>
-        </div>
-        <div class="card-content">
-          <div>
-            <h3>
-              <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
-                {{ tooldata.name }}
-              </a>
-            </h3>
+    {% for tooldata in tooldb %} 
+      <div class="col s6 ">
+        <div class="card" style="max-width: 700px; margin-left: auto;margin-right: auto;">
+          <div class="card-image">
+            <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
+              <img src="{{ tooldata.picpath }}" alt="">
+            </a>
           </div>
-          <div class="row">
-            <div class="col s6">
-              <h6 style="color: red; font-weight: bold;"> £{{ tooldata.price }}
-              </h6>
+          <div class="card-content">
+            <div>
+              <h3>
+                <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
+                  {{ tooldata.name }}
+                </a>
+              </h3>
             </div>
-            <div class="col s6">
-              {{ tooldata.description }}
+            <div class="row">
+              <div class="col s6">
+                <h6 style="color: red; font-weight: bold;"> £{{ tooldata.price }}
+                </h6>
+              </div>
+              <div class="col s6">
+                {{ tooldata.description }}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div> {% endfor %}
+      </div> 
+    {% endfor %} 
   </div>
-</section> {% endblock %}
+</section> 
+{% endblock %}
