@@ -15,8 +15,6 @@ A live website can be found <a href="https://cook-book-antony.herokuapp.com/home
         -   [Project Goals](#project-goals)
             -   [User Goals:](#user-goals)
             -   [User Expectations:](#user-expectations)
-            -   [Trends of Modern Websites](#trends-of-modern-websites)
-            -   [Strategy Table](#strategy-table)
     -   [1.2. Structure](#structure)
     -   [1.3. Skeleton](#skeleton)
     -   [1.4. Surface](#surface)
