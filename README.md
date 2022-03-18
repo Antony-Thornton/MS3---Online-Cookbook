@@ -448,6 +448,16 @@ For the final deployment to Heroku, I had to:
 # 7. End Product
 #### [Go To Top](#table-of-contents "Go To Top")
 
+
+![index web](static/assets/images/finished_product/fp_home.jpg)
+![index web](static/assets/images/finished_product/fp_tools.jpg)
+![index web](static/assets/images/finished_product/fp_community.jpg)
+![index web](static/assets/images/finished_product/fp_profile.jpg)
+![index web](static/assets/images/finished_product/fp_register.jpg)
+![index web](static/assets/images/finished_product/fp_login.jpg)
+
+
+
 # 8. Known Bugs
 #### [Go To Top](#table-of-contents "Go To Top")
 
@@ -474,7 +484,9 @@ Due to a course break and a lack of initial understanding of the course material
 * Picture path bug on tablet - I tested the website on my old iPad tablet 2014. The recipe images were not displaying correctly on my tablet but were displaying on mobile and desktop. Because some pictures do display on the tablet I believe the link is the problem. When I manually changed the link in MongoDB the picture displayed as expected. Will add a warning to the submit form.
         
 ![index web](static/assets/images/testing/ipad_bug_picture.jpg)
+
 ![index web](static/assets/images/testing/s9_bug_screenshot.jpg)
+
 ![index web](static/assets/images/testing/desktop_recipe_screenshot.jpg)
 
 
