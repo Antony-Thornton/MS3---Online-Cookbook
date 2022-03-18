@@ -1,9 +1,9 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} 
+{% block content %} 
 <section class="container" style="text-align: center;">
   <h1 class="col s12 light-green-text text-darken-4 move_to_top">All of your recipes in one place</h1>
   <h3>Browse and edit your recipes here.</h3>
-  <h4>For more information on a recipe, please click the open button. It will show you all the information you have stored. To edit a recipe please go to your <a  class= "nav_format links" href="{{ url_for('profile', username=session['user']) }}">profile</a>.</h4>
+  <h4>For more information on a recipe, please click the open button. It will show you all the information you have stored. To edit a recipe please go to your <a class="nav_format links" href="{{ url_for('profile', username=session['user']) }}">profile</a>. </h4>
   <div class="">
     <div class="row card-panel grey lighten-5">
       <form action="{{ url_for('search_recipes') }}" method="post" class="col s12">
@@ -21,24 +21,31 @@
         </div>
       </form>
     </div>
-    <div>
-      {% for information in info %}
-        {% if information|length > 0 %}    
-          {% if session.user|lower == information.created_by|lower %}
- 
+    <div> 
+      {% for information in info %} 
+        {% if information|length > 0 %} 
+          {% if session.user|lower == information.created_by|lower %} 
             <div class="card" style="max-width: 700px; margin-left: auto;margin-right: auto;">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ information.picpath }}" alt="{{ information.recipe_name }}">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">
-                  {{ information.recipe_name }}<br>
-                  <a class="btn-floating btn-large waves-effect waves-light light-green"><i class="material-icons" style="font-size:small;">Open</i></a></span>
+                  {{ information.recipe_name }}
+                  <br>
+                  <a class="btn-floating btn-large waves-effect waves-light light-green">
+                    <i class="material-icons" style="font-size:small;">Open</i>
+                  </a>
+                </span>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">
-                  {{ information.recipe_name }}<br>
-                  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" style="font-size:small;">CLOSE</i></a></span>
+                  {{ information.recipe_name }}
+                  <br>
+                  <a class="btn-floating btn-large waves-effect waves-light red">
+                    <i class="material-icons" style="font-size:small;">CLOSE</i>
+                  </a>
+                </span>
                 <table class="table">
                   <tbody>
                     <tr>
@@ -70,21 +77,12 @@
                   <p>{{ information.ingredients}}</p>
                 </div>
               </div>
-            </div>
-            {% endif %}
-          {% else %} 
-            <h3>
-              Your recipe list appears to be empty. To submit a recipe please click 
-              <a href="{{ url_for('profile', username=session['user']) }}" class="links" style="text-align: center; color: red;">
-                here
-              </a>
-              .
-            </h3> 
-          {% endif %}
-      {% endfor %}
-
+            </div> 
+          {% endif %} 
+        {% else %} 
+          <h3> Your recipe list appears to be empty. To submit a recipe please click <a href="{{ url_for('profile', username=session['user']) }}" class="links" style="text-align: center; color: red;"> here </a> . </h3> 
+        {% endif %} 
+      {% endfor %} 
     </div>
-  </div>
-
-
+  </div> 
   {% endblock %}
