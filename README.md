@@ -358,11 +358,11 @@ Close Button | The close button within this card should then return the card to 
 ## Register Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-Username Text Input | The username should be able to put in a user name of their choice.|
-Password Text Input | The username should be able to put in a password of their choice. When validated the password should not be accepted unless it’s between 5 and 15 characters in length and has a capital letter. |
-Register Button | The register button should submit a check to mongo to see if the user’s name exists. If it does a message saying username already exists. |
-Register Button Required fields | If any of the text inputs is blank the form should not submit. |
-Register Button | If everything passes the above checks the page should login successfully and display the associated navigation elements and open the profile page with no recipes in the manage recipes list item. |
+Username Text Input | The username should be able to put in a user name of their choice.| Pass | Pass | Pass
+Password Text Input | The username should be able to put in a password of their choice. When validated the password should not be accepted unless it’s between 5 and 15 characters in length and has a capital letter. | Pass | Pass | Pass
+Register Button | The register button should submit a check to mongo to see if the user’s name exists. If it does a message saying username already exists. | Pass | Pass | Pass
+Register Button Required fields | If any of the text inputs is blank the form should not submit. | Pass | Pass | Pass
+Register Button | If everything passes the above checks the page should login successfully and display the associated navigation elements and open the profile page with no recipes in the manage recipes list item. | Pass | Pass | Pass
 
 ## Login Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
@@ -386,15 +386,15 @@ Close Button | The close button within this card should then return the card to 
 ## Profile Page
 | Page | Outcome | Result Desktop | Result iPad | Result S9+ Phone 
 | :--- | :--- | :--- | :--- | :---
-HTML elements | All elements should display as intended. | 
-Page Scaling | The page should display clearly and as intended when page width is reduced. |
-List Elements | Each list element should open and display its contents. |
-List element 1 | The first element should open and show a submit recipe form. |
-Submit form | When used the submit form should submit a user recipe to the mongoDB site. This should then be displayed when the page is refreshed. |
-List element 2 | The second element should open and show all of the users stored recipes. |
-Edit recipe form | When used the edit form button is pressed a new form should be displayed. The users’ changes should then be submitted to the mongoDB site. The changes should then be displayed when the page is refreshed. |
-Delete recipe button | When the delete recipe button is clicked JavaScript should show a warning with a second delete button. When clicked the recipe should be deleted when the page is refreshed.|
-List element 3 | The third element should open and display the users email and username. |
+HTML elements | All elements should display as intended. |  Pass | Pass | Pass
+Page Scaling | The page should display clearly and as intended when page width is reduced. | Pass | Pass | Pass
+List Elements | Each list element should open and display its contents. | Pass | Pass | Pass
+List element 1 | The first element should open and show a submit recipe form. | Pass | Pass | Pass
+Submit form | When used the submit form should submit a user recipe to the mongoDB site. This should then be displayed when the page is refreshed. Pass | Pass | Pass
+List element 2 | The second element should open and show all of the users stored recipes. | Pass | Pass | Pass
+Edit recipe form | When used the edit form button is pressed a new form should be displayed. The users’ changes should then be submitted to the mongoDB site. The changes should then be displayed when the page is refreshed. | Pass | Pass | Pass
+Delete recipe button | When the delete recipe button is clicked JavaScript should show a warning with a second delete button. When clicked the recipe should be deleted when the page is refreshed.| Pass | Pass | Pass
+List element 3 | The third element should open and display the users email and username. | Pass | Pass | Pass
 
 <a name="development-cycle"></a>
 
