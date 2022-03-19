@@ -4,7 +4,7 @@
   <div class="col s6"> 
     {% for tooldata in tooldb %} 
       <div class="col s6 ">
-        <div class="card" style="max-width: 700px; margin-left: auto;margin-right: auto;">
+        <div class="card" style="max-width: 700px; margin-left: auto; margin-right: auto;">
           <div class="card-image">
             <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
               <img src="{{ tooldata.picpath }}" alt="">
@@ -13,7 +13,7 @@
           <div class="card-content">
             <div>
               <h3>
-                <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to LakeLand site">
+                <a href=" {{ tooldata.link }}" class="links" target="_blank" title="Go to Lakeland site">
                   {{ tooldata.name }}
                 </a>
               </h3>
@@ -34,3 +34,4 @@
   </div>
 </section> 
 {% endblock %}
+
