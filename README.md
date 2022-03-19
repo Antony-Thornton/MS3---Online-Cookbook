@@ -390,7 +390,7 @@ HTML elements | All elements should display as intended. |  Pass | Pass | Pass
 Page Scaling | The page should display clearly and as intended when page width is reduced. | Pass | Pass | Pass
 List Elements | Each list element should open and display its contents. | Pass | Pass | Pass
 List element 1 | The first element should open and show a submit recipe form. | Pass | Pass | Pass
-Submit form | When used the submit form should submit a user recipe to the mongoDB site. This should then be displayed when the page is refreshed. Pass | Pass | Pass
+Submit form | When used the submit form should submit a user recipe to the mongoDB site. This should then be displayed when the page is refreshed. | Pass | Pass | Pass
 List element 2 | The second element should open and show all of the users stored recipes. | Pass | Pass | Pass
 Edit recipe form | When used the edit form button is pressed a new form should be displayed. The users’ changes should then be submitted to the mongoDB site. The changes should then be displayed when the page is refreshed. | Pass | Pass | Pass
 Delete recipe button | When the delete recipe button is clicked JavaScript should show a warning with a second delete button. When clicked the recipe should be deleted when the page is refreshed.| Pass | Pass | Pass
