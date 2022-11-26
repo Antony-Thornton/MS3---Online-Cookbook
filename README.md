@@ -4,7 +4,7 @@ Welcome to my third project. This project is a simple online cookbook that allow
 
 This project will show the use of CRUD functionality (Create, Read, Update, Delete). The user will be able create, read, update and delete their user profile and table booking.
 
-A live website can be found <a href="https://cook-book-antony.herokuapp.com/home" target="_blank">here</a>.
+A live website can be found <a href="https://online-cookbook.onrender.com/" target="_blank">here</a>.
 
 ![index web](static/assets/images/readme_lead_image.jpg)
 
